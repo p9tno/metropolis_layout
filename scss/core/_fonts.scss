@@ -1,9 +1,19 @@
-@include font-face("Roboto", '../fonts/Roboto/Roboto-Medium', 500, normal);
-@include font-face("Roboto", '../fonts/Roboto/Roboto-Bold', bold, normal);
-@include font-face("Roboto", '../fonts/Roboto/Roboto-Light', 300, normal);
-@include font-face("Roboto", '../fonts/Roboto/Roboto-Regular', normal, normal);
+// @include font-face("Roboto Slab", '../fonts/Roboto_Slab/RobotoSlab-Bold', bold, normal);
+// @include font-face("Roboto Slab", '../fonts/Roboto_Slab/RobotoSlab-Light', 300, normal);
 
-@include font-face("Roboto Slab", '../fonts/Roboto_Slab/RobotoSlab-Bold', bold, normal);
-@include font-face("Roboto Slab", '../fonts/Roboto_Slab/RobotoSlab-Light', 300, normal);
-@include font-face("Roboto Slab", '../fonts/Roboto_Slab/RobotoSlab-Medium', 500, normal);
-@include font-face("Roboto Slab", '../fonts/Roboto_Slab/RobotoSlab-Regular', normal, normal);
+@include font-face("Archivo", '../fonts/Archivo/Archivo-Thin', 100, normal);
+@include font-face("Archivo", '../fonts/Archivo/Archivo-ExtraLight', 200, normal);
+@include font-face("Archivo", '../fonts/Archivo/Archivo-Light', 300, normal);
+@include font-face("Archivo", '../fonts/Archivo/Archivo-Regular', 400, normal);
+@include font-face("Archivo", '../fonts/Archivo/Archivo-Medium', 500, normal);
+@include font-face("Archivo", '../fonts/Archivo/Archivo-SemiBold', 600, normal);
+@include font-face("Archivo", '../fonts/Archivo/Archivo-Bold', 700, normal);
+@include font-face("Archivo", '../fonts/Archivo/Archivo-ExtraBold', 800, normal);
+@include font-face("Archivo", '../fonts/Archivo/Archivo-Black', 900, normal);
+
+@include font-face("Brandon Grotesque", '../fonts/Brandon/BrandonGrotesque-Thin', 100, normal);
+@include font-face("Brandon Grotesque", '../fonts/Brandon/BrandonGrotesque-Light', 300, normal);
+@include font-face("Brandon Grotesque", '../fonts/Brandon/BrandonGrotesque-Regular', 400, normal);
+@include font-face("Brandon Grotesque", '../fonts/Brandon/BrandonGrotesque-Medium', 500, normal);
+@include font-face("Brandon Grotesque", '../fonts/Brandon/BrandonGrotesque-Black', 900, normal);
+@include font-face("Brandon Grotesque", '../fonts/Brandon/BrandonGrotesque-Bold', 700, normal);

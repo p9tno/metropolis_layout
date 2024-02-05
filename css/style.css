@@ -8,59 +8,108 @@
 /* ======================================================================== */
 @import "../fonts/icon/style.css";
 @font-face {
-  font-family: "Roboto";
+  font-family: "Archivo";
   font-style: normal;
-  font-weight: 500;
-  src: url("../fonts/Roboto/Roboto-Medium.eot?") format("eot"), url("../fonts/Roboto/Roboto-Medium.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Medium.woff") format("woff"), url("../fonts/Roboto/Roboto-Medium.ttf") format("truetype"), url('../fonts/Roboto/Roboto-Medium.svg#str-replace("Roboto", " ", "_")') format("svg");
+  font-weight: 100;
+  src: url("../fonts/Archivo/Archivo-Thin.eot?") format("eot"), url("../fonts/Archivo/Archivo-Thin.woff2") format("woff2"), url("../fonts/Archivo/Archivo-Thin.woff") format("woff"), url("../fonts/Archivo/Archivo-Thin.ttf") format("truetype"), url('../fonts/Archivo/Archivo-Thin.svg#str-replace("Archivo", " ", "_")') format("svg");
   font-display: swap;
 }
 @font-face {
-  font-family: "Roboto";
+  font-family: "Archivo";
   font-style: normal;
-  font-weight: bold;
-  src: url("../fonts/Roboto/Roboto-Bold.eot?") format("eot"), url("../fonts/Roboto/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Bold.woff") format("woff"), url("../fonts/Roboto/Roboto-Bold.ttf") format("truetype"), url('../fonts/Roboto/Roboto-Bold.svg#str-replace("Roboto", " ", "_")') format("svg");
+  font-weight: 200;
+  src: url("../fonts/Archivo/Archivo-ExtraLight.eot?") format("eot"), url("../fonts/Archivo/Archivo-ExtraLight.woff2") format("woff2"), url("../fonts/Archivo/Archivo-ExtraLight.woff") format("woff"), url("../fonts/Archivo/Archivo-ExtraLight.ttf") format("truetype"), url('../fonts/Archivo/Archivo-ExtraLight.svg#str-replace("Archivo", " ", "_")') format("svg");
   font-display: swap;
 }
 @font-face {
-  font-family: "Roboto";
+  font-family: "Archivo";
   font-style: normal;
   font-weight: 300;
-  src: url("../fonts/Roboto/Roboto-Light.eot?") format("eot"), url("../fonts/Roboto/Roboto-Light.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Light.woff") format("woff"), url("../fonts/Roboto/Roboto-Light.ttf") format("truetype"), url('../fonts/Roboto/Roboto-Light.svg#str-replace("Roboto", " ", "_")') format("svg");
+  src: url("../fonts/Archivo/Archivo-Light.eot?") format("eot"), url("../fonts/Archivo/Archivo-Light.woff2") format("woff2"), url("../fonts/Archivo/Archivo-Light.woff") format("woff"), url("../fonts/Archivo/Archivo-Light.ttf") format("truetype"), url('../fonts/Archivo/Archivo-Light.svg#str-replace("Archivo", " ", "_")') format("svg");
   font-display: swap;
 }
 @font-face {
-  font-family: "Roboto";
+  font-family: "Archivo";
   font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/Roboto/Roboto-Regular.eot?") format("eot"), url("../fonts/Roboto/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype"), url('../fonts/Roboto/Roboto-Regular.svg#str-replace("Roboto", " ", "_")') format("svg");
+  font-weight: 400;
+  src: url("../fonts/Archivo/Archivo-Regular.eot?") format("eot"), url("../fonts/Archivo/Archivo-Regular.woff2") format("woff2"), url("../fonts/Archivo/Archivo-Regular.woff") format("woff"), url("../fonts/Archivo/Archivo-Regular.ttf") format("truetype"), url('../fonts/Archivo/Archivo-Regular.svg#str-replace("Archivo", " ", "_")') format("svg");
   font-display: swap;
 }
 @font-face {
-  font-family: "Roboto Slab";
-  font-style: normal;
-  font-weight: bold;
-  src: url("../fonts/Roboto_Slab/RobotoSlab-Bold.eot?") format("eot"), url("../fonts/Roboto_Slab/RobotoSlab-Bold.woff2") format("woff2"), url("../fonts/Roboto_Slab/RobotoSlab-Bold.woff") format("woff"), url("../fonts/Roboto_Slab/RobotoSlab-Bold.ttf") format("truetype"), url('../fonts/Roboto_Slab/RobotoSlab-Bold.svg#str-replace("Roboto Slab", " ", "_")') format("svg");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Roboto Slab";
-  font-style: normal;
-  font-weight: 300;
-  src: url("../fonts/Roboto_Slab/RobotoSlab-Light.eot?") format("eot"), url("../fonts/Roboto_Slab/RobotoSlab-Light.woff2") format("woff2"), url("../fonts/Roboto_Slab/RobotoSlab-Light.woff") format("woff"), url("../fonts/Roboto_Slab/RobotoSlab-Light.ttf") format("truetype"), url('../fonts/Roboto_Slab/RobotoSlab-Light.svg#str-replace("Roboto Slab", " ", "_")') format("svg");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Roboto Slab";
+  font-family: "Archivo";
   font-style: normal;
   font-weight: 500;
-  src: url("../fonts/Roboto_Slab/RobotoSlab-Medium.eot?") format("eot"), url("../fonts/Roboto_Slab/RobotoSlab-Medium.woff2") format("woff2"), url("../fonts/Roboto_Slab/RobotoSlab-Medium.woff") format("woff"), url("../fonts/Roboto_Slab/RobotoSlab-Medium.ttf") format("truetype"), url('../fonts/Roboto_Slab/RobotoSlab-Medium.svg#str-replace("Roboto Slab", " ", "_")') format("svg");
+  src: url("../fonts/Archivo/Archivo-Medium.eot?") format("eot"), url("../fonts/Archivo/Archivo-Medium.woff2") format("woff2"), url("../fonts/Archivo/Archivo-Medium.woff") format("woff"), url("../fonts/Archivo/Archivo-Medium.ttf") format("truetype"), url('../fonts/Archivo/Archivo-Medium.svg#str-replace("Archivo", " ", "_")') format("svg");
   font-display: swap;
 }
 @font-face {
-  font-family: "Roboto Slab";
+  font-family: "Archivo";
   font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/Roboto_Slab/RobotoSlab-Regular.eot?") format("eot"), url("../fonts/Roboto_Slab/RobotoSlab-Regular.woff2") format("woff2"), url("../fonts/Roboto_Slab/RobotoSlab-Regular.woff") format("woff"), url("../fonts/Roboto_Slab/RobotoSlab-Regular.ttf") format("truetype"), url('../fonts/Roboto_Slab/RobotoSlab-Regular.svg#str-replace("Roboto Slab", " ", "_")') format("svg");
+  font-weight: 600;
+  src: url("../fonts/Archivo/Archivo-SemiBold.eot?") format("eot"), url("../fonts/Archivo/Archivo-SemiBold.woff2") format("woff2"), url("../fonts/Archivo/Archivo-SemiBold.woff") format("woff"), url("../fonts/Archivo/Archivo-SemiBold.ttf") format("truetype"), url('../fonts/Archivo/Archivo-SemiBold.svg#str-replace("Archivo", " ", "_")') format("svg");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Archivo/Archivo-Bold.eot?") format("eot"), url("../fonts/Archivo/Archivo-Bold.woff2") format("woff2"), url("../fonts/Archivo/Archivo-Bold.woff") format("woff"), url("../fonts/Archivo/Archivo-Bold.ttf") format("truetype"), url('../fonts/Archivo/Archivo-Bold.svg#str-replace("Archivo", " ", "_")') format("svg");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/Archivo/Archivo-ExtraBold.eot?") format("eot"), url("../fonts/Archivo/Archivo-ExtraBold.woff2") format("woff2"), url("../fonts/Archivo/Archivo-ExtraBold.woff") format("woff"), url("../fonts/Archivo/Archivo-ExtraBold.ttf") format("truetype"), url('../fonts/Archivo/Archivo-ExtraBold.svg#str-replace("Archivo", " ", "_")') format("svg");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/Archivo/Archivo-Black.eot?") format("eot"), url("../fonts/Archivo/Archivo-Black.woff2") format("woff2"), url("../fonts/Archivo/Archivo-Black.woff") format("woff"), url("../fonts/Archivo/Archivo-Black.ttf") format("truetype"), url('../fonts/Archivo/Archivo-Black.svg#str-replace("Archivo", " ", "_")') format("svg");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Brandon Grotesque";
+  font-style: normal;
+  font-weight: 100;
+  src: url("../fonts/Brandon/BrandonGrotesque-Thin.eot?") format("eot"), url("../fonts/Brandon/BrandonGrotesque-Thin.woff2") format("woff2"), url("../fonts/Brandon/BrandonGrotesque-Thin.woff") format("woff"), url("../fonts/Brandon/BrandonGrotesque-Thin.ttf") format("truetype"), url('../fonts/Brandon/BrandonGrotesque-Thin.svg#str-replace("Brandon Grotesque", " ", "_")') format("svg");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Brandon Grotesque";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/Brandon/BrandonGrotesque-Light.eot?") format("eot"), url("../fonts/Brandon/BrandonGrotesque-Light.woff2") format("woff2"), url("../fonts/Brandon/BrandonGrotesque-Light.woff") format("woff"), url("../fonts/Brandon/BrandonGrotesque-Light.ttf") format("truetype"), url('../fonts/Brandon/BrandonGrotesque-Light.svg#str-replace("Brandon Grotesque", " ", "_")') format("svg");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Brandon Grotesque";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Brandon/BrandonGrotesque-Regular.eot?") format("eot"), url("../fonts/Brandon/BrandonGrotesque-Regular.woff2") format("woff2"), url("../fonts/Brandon/BrandonGrotesque-Regular.woff") format("woff"), url("../fonts/Brandon/BrandonGrotesque-Regular.ttf") format("truetype"), url('../fonts/Brandon/BrandonGrotesque-Regular.svg#str-replace("Brandon Grotesque", " ", "_")') format("svg");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Brandon Grotesque";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/Brandon/BrandonGrotesque-Medium.eot?") format("eot"), url("../fonts/Brandon/BrandonGrotesque-Medium.woff2") format("woff2"), url("../fonts/Brandon/BrandonGrotesque-Medium.woff") format("woff"), url("../fonts/Brandon/BrandonGrotesque-Medium.ttf") format("truetype"), url('../fonts/Brandon/BrandonGrotesque-Medium.svg#str-replace("Brandon Grotesque", " ", "_")') format("svg");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Brandon Grotesque";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/Brandon/BrandonGrotesque-Black.eot?") format("eot"), url("../fonts/Brandon/BrandonGrotesque-Black.woff2") format("woff2"), url("../fonts/Brandon/BrandonGrotesque-Black.woff") format("woff"), url("../fonts/Brandon/BrandonGrotesque-Black.ttf") format("truetype"), url('../fonts/Brandon/BrandonGrotesque-Black.svg#str-replace("Brandon Grotesque", " ", "_")') format("svg");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Brandon Grotesque";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Brandon/BrandonGrotesque-Bold.eot?") format("eot"), url("../fonts/Brandon/BrandonGrotesque-Bold.woff2") format("woff2"), url("../fonts/Brandon/BrandonGrotesque-Bold.woff") format("woff"), url("../fonts/Brandon/BrandonGrotesque-Bold.ttf") format("truetype"), url('../fonts/Brandon/BrandonGrotesque-Bold.svg#str-replace("Brandon Grotesque", " ", "_")') format("svg");
   font-display: swap;
 }
 * {
@@ -521,16 +570,17 @@ template {
 }
 
 body {
-  font-family: "Roboto";
+  font-family: "Archivo";
   color: #000;
   line-height: 1.2;
-  font-size: calc(.034 * 100vw + 0px);
+  font-size: calc(.05 * 100vw + 0px);
 }
 @media (min-width: 768px) {
   body {
-    font-size: calc(.00838 * 100vw + 0px);
+    font-size: calc(.008333334 * 100vw + 0px);
   }
 }
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -546,8 +596,8 @@ body {
 }
 
 .container_center, .footer__content, .header__content {
-  max-width: 80em;
-  padding: 0 1em;
+  max-width: 112.5em;
+  padding: 0 1.25em;
   margin-left: auto;
   margin-right: auto;
 }
@@ -556,7 +606,7 @@ body {
   padding: 2em 0;
 }
 .section__title {
-  font-family: "Roboto Slab";
+  font-family: "Brandon Grotesque";
   font-weight: 400;
 }
 
@@ -885,7 +935,7 @@ body {
   }
 }
 .menu-item a {
-  font-family: "Roboto Slab";
+  font-family: "Brandon Grotesque";
   color: #000;
   text-decoration: none;
   text-transform: uppercase;
@@ -1047,7 +1097,7 @@ input[type=url],
 textarea {
   background-color: #fff;
   border: 0.0625em solid #ddd;
-  font-family: "Roboto";
+  font-family: "Archivo";
   color: #000;
   padding: 0.5em 1em;
   outline: none;
@@ -1288,7 +1338,7 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
 .select2-container--default .select2-selection {
   background: #FFFFFF;
   border: 1px solid #DBDBDB;
-  font-family: "Roboto";
+  font-family: "Archivo";
   color: #000;
   padding: 0.65em 1em;
   outline: none;
@@ -1383,7 +1433,7 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
 .select2-container--default.select2-container--disabled .select2-selection {
   background: #FFFFFF;
   border: 1px solid #DBDBDB;
-  font-family: "Roboto";
+  font-family: "Archivo";
   color: #000;
   padding: 0.971em 1.175em;
   outline: none;
@@ -1441,7 +1491,7 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
   border: none;
   outline: none;
   max-width: 100%;
-  font-family: "Roboto";
+  font-family: "Archivo";
   font-size: 1em;
   font-weight: 400;
   text-decoration: none;
