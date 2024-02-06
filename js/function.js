@@ -131,13 +131,13 @@ $(document).ready(function() {
     };
     openMobileNav();
 
-    function activeNav() {
-        $('.menu-item').on('click', function() {
-            $('.menu-item').removeClass('current-menu-item');
-            $(this).addClass('current-menu-item');
-        })
-    };
-    activeNav();
+    // function activeNav() {
+    //     $('.menu-item').on('click', function() {
+    //         $('.menu-item').removeClass('current-menu-item');
+    //         $(this).addClass('current-menu-item');
+    //     })
+    // };
+    // activeNav();
 
     function showMore(classItem, btn) {
         // let classItem = '.vacancies__item';
@@ -214,15 +214,6 @@ $(document).ready(function() {
     }
     doTabs();
 
-    function doDrop() {
-        $('.drop__toggle').on('click', function() {
-            // $('.drop__list').toggleClass('open');
-            $(this).toggleClass('active');
-            $(this).closest('.drop').find('.drop__list').toggleClass('open');
-        });
-    };
-    doDrop();
-
     function initSelect2 () {
         function addIcon(icon) {
             if (!icon.id) {
@@ -264,37 +255,7 @@ $(document).ready(function() {
         //     }
         // })
     }
-    initSelect2();
-
-    $(function(){
-        $(".tel").mask("+7 ( 9 9 9 ) - 9 9 9 - 9 9 - 9 9");
-    });
-
-    function initTwentytwenty () {
-        $(".twentytwenty-container").twentytwenty({
-            default_offset_pct: 0.42, // сколько показывать 'изображение до' в процентах (максимально 1) сразу после загрузки страницы
-            orientation: 'horizontal', // ориентация слайдера ('horizontal' или 'vertical')
-            before_label: 'До', // подпись 'до'
-            after_label: 'После', // подпись 'после'
-            no_overlay: true, // не показывать затемнение с надписями 'до' и 'после'
-            move_slider_on_hover: false, // двигать "бегунок" слайдера вместе с курсором мыши
-            move_with_handle_only: true, // двигать слайдер только за его "бегунок"
-            click_to_move: false // разрешить перемещение "бегунка" слайдера по клику на изображении
-        });
-    }
-    // initTwentytwenty(); добавить пример и стили
-
-
-
-    function addDataFancybox() {
-        let item = $('.itemForDataFancybox_js');
-        let num = 0;
-        item.each(function(index, el) {
-            $(this).find('a').attr('data-fancybox', num);
-            num++;
-        });
-    }
-    addDataFancybox();
+    // initSelect2();
 
 
 
@@ -336,7 +297,7 @@ $(document).ready(function() {
         }
 
     }
-    stikyMenu();
+    // stikyMenu();
 
     // Видео youtube для страницы
     function uploadYoutubeVideo() {
@@ -402,70 +363,42 @@ $(document).ready(function() {
             } );
         }
     };
-    uploadYoutubeVideoForModal();
+    // uploadYoutubeVideoForModal();
 
 
-    // start animate numbers
+    // start onVisible
     function onVisible( selector, callback, repeat = false ) {
 
-    let options = {
-        threshold: [ 0.5 ]
-    };
-    let observer = new IntersectionObserver( onEntry, options );
-    let elements = document.querySelectorAll( selector );
+        let options = {
+            threshold: [ 0.5 ]
+        };
+        let observer = new IntersectionObserver( onEntry, options );
+        let elements = document.querySelectorAll( selector );
 
-    for ( let elm of elements ) {
-        observer.observe( elm );
-    }
+        for ( let elm of elements ) {
+            observer.observe( elm );
+        }
 
-    function onEntry( entry ) {
-        entry.forEach( change => {
-            let elem = change.target;
-            // console.log(change);
-            // console.log(elem.innerHTML);
-            if ( change.isIntersecting ) {
-                if ( !elem.classList.contains( 'show' ) || repeat ) {
-                    elem.classList.add( 'show' );
-                    callback( elem );
+        function onEntry( entry ) {
+            entry.forEach( change => {
+                let elem = change.target;
+                // console.log(change);
+                // console.log(elem.innerHTML);
+                if ( change.isIntersecting ) {
+                    if ( !elem.classList.contains( 'show' ) || repeat ) {
+                        elem.classList.add( 'show' );
+                        callback( elem );
+                    }
                 }
-            }
-        } );
-    }
+            });
+        }
     }
 
     onVisible( '.programsInfo__number', function ( e ) {
-        animateNumber( e, e.innerHTML );
+        // cod or function
     } );
+    // end onVisible
 
-    function animateNumber( elem, final, duration = 1000 ) {
-        let start = 0;
-        // console.log('init');
-        setInterval( function () {
-            if ( final > start ) {
-                elem.innerHTML = start++;
-            }
-        }, duration / final );
-    }
-
-    function initAOS () {
-        // https://github.com/michalsnik/aos
-        AOS.init({
-            disable: 'mobile',
-            // anchorPlacement: 'bottom-bottom',
-            duration: 1000, // values from 0 to 3000, with step 50ms
-            // offset: 20,
-            once: true,
-        });
-
-        AOS.init({
-            disable: function () {
-                var maxWidth = 768;
-                return window.innerWidth < maxWidth;
-            }
-        });
-
-    }
-    initAOS ();
 
 
     // --------------------------------------------------------------------
@@ -565,4 +498,3 @@ $(document).ready(function() {
 
 
 })
-// end animate numbers
