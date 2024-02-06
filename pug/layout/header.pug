@@ -1,26 +1,25 @@
 header.header
-    .header__content
-        .header__logo
-            a.logo(href="/")
-                img(src="/img/logo.png", alt="alt")
+    .container_center
+        .header__row
+            .header__info
+                a(href="tel:(800)9616220") (800) 961-6220
+                a(href="mailto:info@metrodnc.com") info@metrodnc.com
 
-        .header__toggle
+            .header__toggle
+                i
+                span.desktop MENU
 
-        .header__nav
-            nav.navbar#navbar
+
+
+    .header__nav
+        .container_center
+            a.header__logo.img.desktop(href="/")
+                img(src="/img/logo_h.png", alt="alt")
+
+            nav.header__navbar
                 ul.menu
                     li.menu-item.current-menu-item
-                        a(href="#") Новости
-                    li.menu-item
-                        a(href="#") Объявления
-                    li.menu-item
-                        a(href="#") F.A.Q.
-                    li.menu-item
-                        a(href="#") Контакты
-                        
-                    li.menu-item.menu-item-has-children
-                        a(href="#") Важное
-                        ul.sub-menu
-                            each item in [1, 2, 3, 4]
-                                li.menu-item
-                                    a(href="#") Важный пункт меню
+                        a(href="#") HOME
+                    each item in ['about us', 'portfolio', 'testimonials', 'Contact Us', ]
+                        li.menu-item
+                            a(href="#")=item

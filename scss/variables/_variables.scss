@@ -2,21 +2,24 @@
 /* ======================================================================== */
 $main_font_family: "Archivo";
 $second_font_family: "Brandon Grotesque";
-$main_color: #000;
-$main_line_height: 1.2;
 $main_font_size: 1em;
-
 $container_width: 112.5em;
+$main_line_height: 1.2;
 
-$footer_height: auto;
+$main_color: #524D43;
+$second_color: #292929;
+$color_primary: #948D7C;
+$color_light: #fffdfa;
+$color_light_primary: #F3F1ED;
 
 // Color collection for elements
-$color_primary: #7b8287;
+$color_white: #fffffff;
+
+// $color_primary: #7b8287;
 $color_success: #36a566;
 $color_info: #03a9f4;
 $color_warning: #fca33e;
 $color_danger: #ff1a1a;
-$color_white: #ffffff;
 
 /* Grid */
 /* ======================================================================== */

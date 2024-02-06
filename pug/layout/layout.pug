@@ -1,7 +1,8 @@
 block variable
     -var path = '';
+    //- -var classHeader = '';
     //- -var page = true;
-    //- -var pageClass = 'bg';
+    -var pageClass = '';
 
 <!DOCTYPE html>
 html(lang="en")
@@ -12,7 +13,8 @@ html(lang="en")
         title Document
         link(rel="stylesheet", type="text/css", href=path +"css/swiper-bundle.min.css")
         link(rel="stylesheet", type="text/css", href=path + "css/style.css")
-    body
+
+    body(class=pageClass)
 
         //- begin preloader
         //- .preloader__wrap#preloader

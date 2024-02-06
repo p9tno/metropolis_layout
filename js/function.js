@@ -124,9 +124,18 @@ $(document).ready(function() {
     function openMobileNav() {
         $('.header__toggle').click(function(event) {
             // console.log('Показ меню');
-            $('.navbar').toggleClass('navbar_open');
+            $('.header__nav').toggleClass('header__nav_open');
             $('.header__toggle').toggleClass('header__toggle_open');
             $( 'body' ).toggleClass( 'nav-open' );
+        });
+
+        $(document).mouseup(function (e) {
+            let div = $(".header");
+            if (!div.is(e.target) && div.has(e.target).length === 0) {
+                $('.header__nav').removeClass('header__nav_open');
+                $('.header__toggle').removeClass('header__toggle_open');
+                $('body').removeClass('nav-open');
+            }
         });
     };
     openMobileNav();

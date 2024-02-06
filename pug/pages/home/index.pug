@@ -2,9 +2,19 @@ extends ../../layout/layout.pug
 
 block variable
     -var path = '../../';
+    -var pageClass = 'home';
 
 
 block content
+    // begin firstscreen
+    section#firstscreen.firstscreen.section
+        .container_center
+            h2.section__title 
+            .firstscreen__content
+                .firstscreen__left
+                .firstscreen__right
+
+    // end firstscreen
 
     //- // begin form
     //- section#form.form.section
