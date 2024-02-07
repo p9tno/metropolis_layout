@@ -1,14 +1,81 @@
 /* Footer
  ----------------------------------------------------------------------------- */
 .footer {
-	position: relative;
-	padding: 1em 0;
-	background-color: #ddd;
-
 	&__content {
-		@extend .container_center;
+		background-color: $second_color;
+		color: $color_light_primary;
+
+		padding: 6.25em 0;
+	}
+
+	&__row {
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
+		padding-bottom: 3.75em;
+
 	}
+
+	&__col {}
+
+	&__logo {
+		display: block;
+		width: 21.5625em;
+		text-decoration: none;
+	}
+
+	&__info {
+		font-weight: 300;
+		line-height: 1.5;
+		margin-top: 3.75em;
+		@media (min-width: 768px) {
+			width: 20em;
+		}
+	}
+
+	&__navbar {
+		.menu {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+	}
+
+	&__to {
+		margin-top: 1.25em;
+		text-align: center;
+
+		a {
+			color: $color_light_primary;
+			text-decoration: none;
+			line-height: 1.5;
+		}
+	}
+
+	&__developed {
+		@media (min-width: 768px) {
+			text-align: center;
+			padding: 1em 0;
+
+			a {
+				color: $second_color;
+				font-size: 1.25em;
+				font-weight: 600;
+				line-height: 1.4;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	.action {
+		&__label {}
+
+		&__list {
+			display: flex;
+			flex-direction: column;
+		}
+
+		&__item {}
+
+	}
+
 }

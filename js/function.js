@@ -83,24 +83,18 @@ $(document).ready(function() {
             console.log('isLgWidth else');
         }
     }
-
-    function scrollPage () {
-        $(".toTop").on("click","a", function (event) {
+    
+    function scroolTo() {
+        $(".scroll_js").on("click", function (event) {
             event.preventDefault();
             let id  = $(this).attr('href');
+            // console.log(id);
+
             let top = $(id).offset().top;
             $('body,html').animate({scrollTop: top}, 1500);
         });
-
-        $(window).scroll(function(){
-            if($(window).scrollTop()>500){
-                $('.toTop').fadeIn(900)
-            }else{
-                $('.toTop').fadeOut(700)
-            }
-        });
-    }
-    scrollPage();
+    };
+    scroolTo();
 
     function showModal() {
         $('.show_modal_js').on('click', function (e) {

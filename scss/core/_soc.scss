@@ -1,0 +1,67 @@
+.soc {
+    padding-top: 3.75em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625em;
+
+    border-top: 1px solid rgba(245, 243, 239, 0.2);
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 3.875em;
+        height: 3.875em;
+
+        background-color: #f5f3ef;
+        color: $second_color;
+
+        text-decoration: none;
+
+        i {
+            font-size: 1.25em;
+            color: $second_color;
+            @media (min-width: 768px) {
+                position: relative;
+                transition: 0.8s;
+            }
+        }
+
+        @media (min-width: 768px) {
+            position: relative;
+            overflow: hidden;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+
+                display: block;
+                width: 0;
+                height: 0;
+
+                background-color: $second_color;
+                transition: 0.8s;
+            }
+
+            &:hover {
+                i {
+                    color: $color_light;
+                }
+
+                &:before {
+                    content: '';
+                    width: 110%;
+                    height: 110%;
+
+                }
+            }
+        }
+
+    }
+
+}

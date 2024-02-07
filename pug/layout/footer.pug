@@ -1,4 +1,47 @@
 footer.footer
     .footer__content
-        p <script type="text/javascript">document.write(new Date().getFullYear());</script>
+        .container_center
+            .footer__row
+                .footer__col
+                    a.footer__logo.img(href="/")
+                        img(src="/img/logo_f.png", alt="alt")
+                    .footer__info.desktop <script type="text/javascript">document.write(new Date().getFullYear());</script> | Metropolis Drafting and Construction. Lic. #930380
+                .footer__col
+                    nav.footer__navbar
+                        ul.menu
+                            li.menu-item.current-menu-item
+                                a(href="#") HOME
+                            each item in ['about us', 'portfolio', 'testimonials', 'Contact Us', ]
+                                li.menu-item
+                                    a(href="#")=item
 
+                .footer__col
+                    .action
+                        .action__label contact info:
+                        .action__list
+                            a.action__item(href="#")
+                                i.icon_phone
+                                span (800) 961-6220
+                            a.action__item(href="#")
+                                i.icon_email
+                                span info@metrodnc.com
+                            span.action__item
+                                i.icon_loc
+                                span location
+                .footer__col.mobile
+                    .footer__info <script type="text/javascript">document.write(new Date().getFullYear());</script> | Metropolis Drafting and Construction. Lic. #930380        
+
+            .soc
+                a.soc__link(href="#")
+                    i.icon_fb
+                a.soc__link(href="#")
+                    i.icon_twitter
+                a.soc__link(href="#")
+                    i.icon_soc
+                a.soc__link(href="#")
+                    i.icon_insta
+
+            .footer__to
+                a.scroll_js(href="#wrapper") Back to the Top ↑
+    .footer__developed.desktop
+        a(href="#") created by deesse media

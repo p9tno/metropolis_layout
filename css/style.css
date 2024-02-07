@@ -596,7 +596,7 @@ body {
   flex-grow: 1;
 }
 
-.container_center, .footer__content {
+.container_center {
   max-width: 112.5em;
   padding: 0 1.25em;
   margin-left: auto;
@@ -693,6 +693,61 @@ body {
 }
 .counter-item .counter-el:after {
   content: counter(line) " ";
+}
+
+.soc {
+  padding-top: 3.75em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625em;
+  border-top: 1px solid rgba(245, 243, 239, 0.2);
+}
+.soc__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.875em;
+  height: 3.875em;
+  background-color: #f5f3ef;
+  color: #292929;
+  text-decoration: none;
+}
+.soc__link i {
+  font-size: 1.25em;
+  color: #292929;
+}
+@media (min-width: 768px) {
+  .soc__link i {
+    position: relative;
+    transition: 0.8s;
+  }
+}
+@media (min-width: 768px) {
+  .soc__link {
+    position: relative;
+    overflow: hidden;
+  }
+  .soc__link:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 0;
+    height: 0;
+    background-color: #292929;
+    transition: 0.8s;
+  }
+  .soc__link:hover i {
+    color: #fffdfa;
+  }
+  .soc__link:hover:before {
+    content: "";
+    width: 110%;
+    height: 110%;
+  }
 }
 
 /* Header
@@ -938,17 +993,62 @@ body {
 
 /* Footer
  ----------------------------------------------------------------------------- */
-.footer {
-  position: relative;
-  padding: 1em 0;
-  background-color: #ddd;
-}
 .footer__content {
+  background-color: #292929;
+  color: #F3F1ED;
+  padding: 6.25em 0;
+}
+.footer__row {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  padding-bottom: 3.75em;
 }
-
+.footer__logo {
+  display: block;
+  width: 21.5625em;
+  text-decoration: none;
+}
+.footer__info {
+  font-weight: 300;
+  line-height: 1.5;
+  margin-top: 3.75em;
+}
+@media (min-width: 768px) {
+  .footer__info {
+    width: 20em;
+  }
+}
+.footer__navbar .menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.footer__to {
+  margin-top: 1.25em;
+  text-align: center;
+}
+.footer__to a {
+  color: #F3F1ED;
+  text-decoration: none;
+  line-height: 1.5;
+}
+@media (min-width: 768px) {
+  .footer__developed {
+    text-align: center;
+    padding: 1em 0;
+  }
+  .footer__developed a {
+    color: #292929;
+    font-size: 1.25em;
+    font-weight: 600;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+}
+.footer .action__list {
+  display: flex;
+  flex-direction: column;
+}
 .icon_close {
   position: absolute;
   width: 1.3125em;
