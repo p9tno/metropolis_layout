@@ -84,6 +84,23 @@ $(document).ready(function() {
         }
     }
 
+    let mediaQuerySize = 768;
+    let windowWidth = screen.width;
+    if (windowWidth >= mediaQuerySize) {
+        // console.log('desktop');
+        scroolPreview('#preview');
+    } else {
+        // console.log('mobile');
+        scroolPreview('#sliders', 20);
+    }
+
+    function scroolPreview(to, position = 0) {
+        $('.preview__control > i').on('click', function (e) {
+            let top = $(to).offset().top-position;
+            $('body,html').animate({scrollTop: top}, 1000);
+        });
+    }
+
     function scroolTo() {
         $(".scroll_js").on("click", function (event) {
             event.preventDefault();

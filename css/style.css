@@ -1082,6 +1082,14 @@ body {
 .preview__img {
   width: 9.6875em;
   height: 14.75em;
+  overflow: hidden;
+}
+.swiper-slide-active .preview__img img {
+  transform: scale(1.3);
+  animation: zoomOut;
+  animation-duration: 2s;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
 }
 @media (min-width: 768px) {
   .preview__img {
@@ -1104,6 +1112,9 @@ body {
     height: 26.5625em;
   }
 }
+.preview__sm .swiper-slide {
+  box-shadow: rgba(0, 0, 0, 0.3) 0 19px 38px, rgba(0, 0, 0, 0.22) 0 15px 12px;
+}
 .preview__lg {
   width: 9.6875em;
   height: 14.75em;
@@ -1122,6 +1133,9 @@ body {
     width: 100%;
     height: 58.125em;
   }
+}
+.preview__lg .swiper-slide {
+  box-shadow: rgba(0, 0, 0, 0.3) 0 19px 38px, rgba(0, 0, 0, 0.22) 0 15px 12px;
 }
 .preview__info {
   margin-top: 1.5em;
@@ -1162,11 +1176,17 @@ body {
   line-height: 1.5;
   text-transform: uppercase;
   color: #938B7C;
+  opacity: 0;
 }
 @media (min-width: 768px) {
   .preview__label {
     font-size: 0.875em;
   }
+}
+.swiper-slide-active .preview__label {
+  opacity: 1;
+  animation: fadeInUp;
+  animation-duration: 2s;
 }
 .preview__title {
   font-size: 1em;
@@ -1175,6 +1195,7 @@ body {
   text-transform: uppercase;
   color: #292929;
   margin-top: 0.25em;
+  opacity: 0;
 }
 @media (min-width: 768px) {
   .preview__title {
@@ -1182,12 +1203,18 @@ body {
     font-size: 1.25em;
   }
 }
+.swiper-slide-active .preview__title {
+  opacity: 1;
+  animation: fadeInUp;
+  animation-duration: 2s;
+}
 .preview__text {
   font-size: 0.875em;
   font-weight: 300;
   line-height: 1.5;
   text-align: justify;
   margin-top: 1em;
+  opacity: 0;
 }
 @media (min-width: 768px) {
   .preview__text {
@@ -1195,10 +1222,33 @@ body {
     font-size: 1em;
   }
 }
+.swiper-slide-active .preview__text {
+  opacity: 1;
+  animation: fadeInUp;
+  animation-duration: 2s;
+}
 .preview__control {
   margin-top: 1.375em;
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 150%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes zoomOut {
+  from {
+    transform: scale(1.3);
+  }
+  to {
+    transform: scale(1);
+  }
+}
 /* Footer
  ----------------------------------------------------------------------------- */
 .footer__content {

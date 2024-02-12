@@ -15,7 +15,7 @@ block content
                         h1.section__title Metropolis
                         .preview__desc We are here to help you accomplish your remodeling goals. Let us transform your kitchen, Modernize your bathroom, Expand your house or refresh your patio.
 
-                    .preview__sliders
+                    .preview__sliders#sliders
                         .preview__imgs
                             .preview__lg
                                 .swiper.preview_lg_js
@@ -26,7 +26,7 @@ block content
                                                     img(src="../../img/preview_"+item+".webp" alt="image" loading="lazy")
 
                             .preview__sm
-                                .swiper.preview_sm_js
+                                .swiper.preview_sm_js 
                                     .swiper-wrapper
                                         each item in ['1', '2', '3', '4']
                                             .swiper-slide
@@ -35,18 +35,18 @@ block content
                         .preview__info
                             .swiper.preview_info_js 
                                 .swiper-wrapper
-                                    each item in [{label: 'Kitchen Remodeling', title: '1208 N. Lima St. Burbank', text: 'In this Burbank remodeling project, we took this 1200sq. bungalow home and turned it to a wonderful mixture of European modern kitchen & bathrooms and calm transitional mid-century modern furniture and flooring.'}, {label: 'Kitchen', title: '1208 N. Lima St. Burbank 1208 N. Lima St. Burbank', text: 'In this Burbank remodeling project, we took this 1200sq. bungalow home and turned it to a wonderful mixture of European modern kitchen'}, {label: 'Remodeling', title: '1208', text: 'In this Burbank remodeling project, we took this 1200sq. bungalow home and turned it to a wonderful mixture of European modern kitchen & bathrooms and calm transitional mid-century modern furniture and flooring. In this Burbank remodeling project, we took this 1200sq. bungalow home and turned it to a wonderful mixture of European modern kitchen & bathrooms and calm transitional mid-century modern furniture and flooring.'}, {label: 'Remodeling Remodeling Remodeling', title: 'St. Burbank', text: 'In this Burbank remodeling project, we took this 1200sq.'}]
+                                    each item in [{label: 'Kitchen Remodeling', title: '1208 N. Lima St. Burbank', text: 'In this Burbank remodeling project, we took this 1200sq. bungalow home and turned it to a wonderful mixture of European modern kitchen & bathrooms and calm transitional mid-century modern furniture and flooring.'}, {label: 'Kitchen', title: '1208 N. Lima St. Burbank 1208 N. Lima St. Burbank', text: 'In this Burbank remodeling project, we took this 1200sq. bungalow home and turned it to a wonderful mixture of European modern kitchen'}, {label: 'Remodeling', title: '1208', text: 'In this Burbank remodeling project, we took this 1200sq. bungalow home and turned it to a wonderful mixture of European modern kitchen & bathrooms and calm transitional mid-century modern furniture and flooring. In this Burbank remodeling project, we took this 1200sq.'}, {label: 'Remodeling Remodeling Remodeling', title: 'St. Burbank', text: 'In this Burbank remodeling project, we took this 1200sq.'}]
                                         .swiper-slide
                                             .preview__box
                                                 .preview__label=item.label
                                                 .preview__title=item.title 
-                                                .preview__text=item.text 
+                                                .preview__text=item.text  
 
 
                             .preview__control.swiper-control
                                 i.swiper-arrow.icon_arrow_left
                                 .swiper-pagination
-                                i.swiper-arrow.icon_arrow_right
+                                i.swiper-arrow.icon_arrow_right 
 
 
     // end preview
