@@ -97,6 +97,7 @@
 				position: absolute;
 				top: 0;
 				right: 0;
+				z-index: 20;
 
 				justify-content: center;
 
@@ -183,6 +184,7 @@
 		top: -50em;
 		left: 0;
 		width: 100%;
+		z-index: 15;
 
 		padding: 4.25em 0 4.125em;
 

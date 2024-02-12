@@ -11,7 +11,6 @@ body {
 	line-height: $main_line_height;
 
 	background-color: $color_light_primary;
-	// background-color: $main_color;
 	color: $main_color;
 
 }
@@ -44,12 +43,23 @@ body {
 	padding: 2em 0;
 
 	&:first-child {
-		padding-top: 6em;
+		// padding-top: 6em;
 	}
 
 	&__title {
+		margin: 0;
+
 		font-family: $second_font_family;
+		font-size: 3em;
 		font-weight: 400;
+		line-height: 1.1;
+		letter-spacing: -0.05em;
+		text-transform: uppercase;
+		color: $second_color;
+
+		@media (min-width: 768px) {
+			font-size: 4.25em;
+		}
 	}
 }
 

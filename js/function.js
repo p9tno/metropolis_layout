@@ -83,7 +83,7 @@ $(document).ready(function() {
             console.log('isLgWidth else');
         }
     }
-    
+
     function scroolTo() {
         $(".scroll_js").on("click", function (event) {
             event.preventDefault();

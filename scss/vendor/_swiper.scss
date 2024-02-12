@@ -1,0 +1,46 @@
+.swiper {}
+
+.swiper-control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 6em;
+}
+
+.swiper-arrow {
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 1.25em;
+    width: 1.25em;
+
+    // border: 1px solid #000;
+
+    color: $second_color;
+    opacity: 1;
+
+    cursor: pointer;
+    outline: none;
+    transition: opacity 0.3s;
+
+    &:before {
+        font-size: 0.75em;
+    }
+
+    &.swiper-button-disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}
+
+.swiper-pagination {
+
+    position: initial;
+    font-size: 0.875em;
+    font-weight: 500;
+    color: $second_color;
+
+}

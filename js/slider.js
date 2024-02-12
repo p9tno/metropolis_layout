@@ -1,4 +1,77 @@
 $(document).ready(function() {
+    function initPreviewSliders() {
+        const speed = 1500;
+        const lg = new Swiper(".preview_lg_js", {
+            slidesPerView: 1,
+            allowTouchMove: false,
+            clickable: false,
+            // loop: true,
+            speed: speed,
+
+        });
+
+        const sm22 = new Swiper(".preview_sm_js", {
+            slidesPerView: 1,
+            allowTouchMove: false,
+            clickable: false,
+            // loop: true,
+            speed: speed,
+            thumbs: {
+                swiper: lg,
+            },
+        });
+
+        const info = new Swiper(".preview_info_js", {
+            slidesPerView: 1,
+            allowTouchMove: false,
+            clickable: false,
+            // loop: true,
+            speed: speed,
+
+            // autoplay: {
+            //   delay: 5000,
+            // },
+
+            effect: "fade",
+            fadeEffect: {
+              crossFade: true
+            },
+
+            autoHeight: true,
+
+            navigation: {
+                nextEl: '.preview__control .icon_arrow_right',
+                prevEl: '.preview__control .icon_arrow_left',
+            },
+
+            breakpoints: {
+                768: {
+                    autoHeight: false,
+                },
+
+            },
+
+
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction",
+              },
+
+            thumbs: {
+                swiper: sm22,
+            },
+        });
+    }
+    initPreviewSliders()
+
+
+
+
+
+
+    // BEGIN project
+
+    // END project
 
 
     const certificate = new Swiper('.certificate-swiper-js', {
@@ -345,49 +418,7 @@ $(document).ready(function() {
     // let activeSlide = swiper.activeIndex;
 
 
-    // BEGIN project
-    const project_sm = new Swiper(".project-swiper-sm-js", {
-        spaceBetween: 6,
-        slidesPerView: 2,
-        // allowTouchMove: false,
-        // clickable: false,
-        centeredSlides: true,
-        loop: true,
 
-
-        freeMode: true,
-        watchSlidesProgress: true,
-
-        breakpoints: {
-            768: {
-                slidesPerView: 7,
-                spaceBetween: 12,
-                centeredSlides: false,
-                // allowTouchMove: false,
-            },
-        }
-
-    });
-
-    const project = new Swiper(".project-swiper-js", {
-        slidesPerView: 1,
-        // allowTouchMove: false,
-        loop: true,
-
-        navigation: {
-            nextEl: '.icon_arrow_right',
-            prevEl: '.icon_arrow_left',
-        },
-
-        pagination: {
-            el: '.project__dotted',
-        },
-
-        thumbs: {
-            swiper: project_sm,
-        },
-    });
-    // END project
 
     const otherProjects = new Swiper(".otherProjects-swiper-js", {
         slidesPerView: 1,
