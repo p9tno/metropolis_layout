@@ -3,6 +3,7 @@ block variable
     //- -var classHeader = '';
     //- -var page = true;
     -var pageClass = '';
+    -var homepage = false;
 
 <!DOCTYPE html>
 html(lang="en")
@@ -14,6 +15,7 @@ html(lang="en")
         link(rel="stylesheet", type="text/css", href=path +"css/swiper-bundle.min.css")
         link(rel="stylesheet", type="text/css", href=path + "css/style.css")
         <meta http-equiv="imagetoolbar" content="no" />
+
 
     body(class=pageClass)
 
@@ -39,7 +41,8 @@ html(lang="en")
 
             include footer.pug
 
-
+            if homepage
+                script(src=path +"js/map.js")
 
             include modal.pug
 
