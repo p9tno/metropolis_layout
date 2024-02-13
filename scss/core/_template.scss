@@ -40,7 +40,10 @@ body {
 }
 
 .section {
-	padding: 2em 0;
+	padding: 1.875em 0;
+	@media (min-width: 768px) {
+		padding: 3.75em 0;
+	}
 
 	&:first-child {
 		// padding-top: 6em;

@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
         //@ts-ignore
         const { Map } = await google.maps.importLibrary('maps');
         // 34.05337154967566, -118.36230308012492
-        // console.log(mapMarkers);
 
         map = new Map(document.getElementById('map'), {
             center: { lat: 34.053, lng: -118.362 },
@@ -36,10 +35,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 marker.addListener('click', (e) => {
-                    if (!mark.classList.contains('open')) {
-                        markContent.innerHTML = setMarkerContent(title, place, text, link, images);
-                        mark.classList.add('open');
-                    }
+                    // if (!mark.classList.contains('open')) {
+                    //
+                    //     markContent.innerHTML = setMarkerContent(title, place, text, link, images);
+                    //     mark.classList.add('open');
+                    // }
+                    markContent.innerHTML = setMarkerContent(title, place, text, link, images);
+                    initSlider();
+                    mark.classList.add('open');
                 });
             };
 
@@ -52,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function setMarkerContent(title, place, text, link, images) {
         let slides = '';
         images.forEach((img) => {
-            slides += `<div class="markSlider__slide">
+            slides += `<div class="swiper-slide">
 				<img
 					src="${img}"
 					alt=""
@@ -61,11 +64,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         return `<div class="mark__thumb">
-				<div class="markSlider">${slides}</div>
+
+                <div class="swiper preview_markSlider_js">
+                    <div class="swiper-wrapper">
+                        ${slides}
+                    </div>
+                </div>
+
+
+
 				<div class="markSlider__action">
-					<div class="markSlider__next"></div>
-					<div class="markSlider__count">1/${images.length}</div>
-					<div class="markSlider__prev"></div>
+                    <div class="swiper-control">
+                        <i class="swiper-arrow icon_arrow_left"></i>
+                        <div class="swiper-pagination"></div>
+                        <i class="swiper-arrow icon_arrow_right"></i>
+                    </div>
 				</div>
 			</div>
 			<div class="mark__body">
@@ -83,3 +96,24 @@ document.addEventListener('DOMContentLoaded', () => {
 		`;
     }
 });
+
+
+function initSlider() {
+    console.log('initSlider');
+    const markSlider = new Swiper('.preview_markSlider_js', {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        speed: 500,
+        loop: true,
+
+        navigation: {
+            nextEl: '.icon_arrow_right',
+            prevEl: '.icon_arrow_left',
+        },
+        pagination: {
+            el: ".markSlider__action .swiper-pagination",
+            type: "fraction",
+        },
+
+    });
+}

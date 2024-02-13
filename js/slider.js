@@ -86,41 +86,6 @@ $(document).ready(function() {
 
 
 
-
-
-
-    // BEGIN project
-
-    // END project
-
-
-    const certificate = new Swiper('.certificate-swiper-js', {
-        slidesPerView: 2,
-        spaceBetween: 10,
-        speed: 500,
-        loop: true,
-        // autoplay: {
-        //   delay: 5000,
-        // },
-
-        navigation: {
-            nextEl: '.icon_arrow_right',
-            prevEl: '.icon_arrow_left',
-        },
-        pagination: {
-            el: '.certificate__dotted',
-            clickable: true,
-        },
-
-        breakpoints: {
-            768: {
-                spaceBetween: 24,
-                slidesPerView: 3,
-            },
-
-        }
-    });
-
     const ourhouses = new Swiper('.ourhouses-swiper-js', {
         slidesPerView: 1,
         spaceBetween: 10,

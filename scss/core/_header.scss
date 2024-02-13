@@ -296,6 +296,8 @@
 	z-index: 1;
 }
 
-.nav-open {
-	overflow: hidden;
+@media (max-width: 767px) {
+	.nav-open {
+		overflow: hidden;
+	}
 }
