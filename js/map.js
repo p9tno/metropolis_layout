@@ -14,12 +14,24 @@ document.addEventListener('DOMContentLoaded', () => {
         const { Map } = await google.maps.importLibrary('maps');
         // 34.05337154967566, -118.36230308012492
 
+        const bounds = new google.maps.LatLngBounds();
+
+        mapMarkers.forEach((marker) => {
+            bounds.extend(new google.maps.LatLng(marker.position.lat, marker.position.lng));
+        });
+
         map = new Map(document.getElementById('map'), {
             center: { lat: 34.053, lng: -118.362 },
             zoom: 11,
             disableDefaultUI: true,
             mapId: 'e87a5ee68e47b684',
         });
+        // console.log(map);
+        // console.log(bounds);
+
+        map.fitBounds(bounds);
+
+
 
         mapMarkers.forEach(({ title, position, place, text, link, images }, i) => {
             // console.log(title, position);
@@ -40,17 +52,32 @@ document.addEventListener('DOMContentLoaded', () => {
                     //     markContent.innerHTML = setMarkerContent(title, place, text, link, images);
                     //     mark.classList.add('open');
                     // }
+
+                    mark.classList.remove('open');
                     markContent.innerHTML = setMarkerContent(title, place, text, link, images);
                     initSlider();
-                    mark.classList.add('open');
+
+                    setTimeout(() => {
+                        mark.classList.add('open');
+
+                    }, 100);
+
                 });
             };
 
             setTimeout(addMarker, 500 * i);
         });
+
+
+
+
     }
 
     initMap();
+
+    // if(map) {
+    //     map.setZoom(1);
+    // }
 
     function setMarkerContent(title, place, text, link, images) {
         let slides = '';

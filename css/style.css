@@ -1392,8 +1392,8 @@ body {
   height: 3em;
   width: 7.8125em;
   padding: 0.2em 0.8em;
-  background: #292929;
   color: #fffdfa;
+  border: 1px solid #000;
 }
 .construction__content .markSlider__next, .construction__content .markSlider__prev {
   border-top: 2px solid #fff;
