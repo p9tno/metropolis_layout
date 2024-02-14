@@ -1,16 +1,17 @@
 $icomoon-font-family: "icon" !default;
 $icomoon-font-path: "fonts" !default;
 
-$icon_arrow_deg: \e900;
-$icon_arrow_bottom: \e901;
-$icon_arrow_left: \e902;
-$icon_arrow_right: \e903;
-$icon_arrow_top: \e904;
-$icon_email: \e905;
-$icon_fb: \e906;
-$icon_insta: \e907;
-$icon_loc: \e908;
-$icon_phone: \e909;
-$icon_soc: \e90a;
-$icon_twitter: \e91a;
+$icon_close: unquote('"\\e90b"');
+$icon_arrow_deg: unquote('"\\e900"');
+$icon_arrow_bottom: unquote('"\\e901"');
+$icon_arrow_left: unquote('"\\e902"');
+$icon_arrow_right: unquote('"\\e903"');
+$icon_arrow_top: unquote('"\\e904"');
+$icon_email: unquote('"\\e905"');
+$icon_fb: unquote('"\\e906"');
+$icon_insta: unquote('"\\e907"');
+$icon_loc: unquote('"\\e908"');
+$icon_phone: unquote('"\\e909"');
+$icon_soc: unquote('"\\e90a"');
+$icon_twitter: unquote('"\\e91a"');
 

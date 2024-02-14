@@ -1300,116 +1300,107 @@ body {
   top: 0;
   left: 0;
   bottom: 0;
-  width: 41.6875em;
-  background: #fffdfa;
   display: flex;
   flex-direction: column;
-  color: #292929;
-  transform: translateX(-42em);
-  transition: transform 0.7s;
+  width: 35.875em;
+  border: 1px solid #D0CABF;
+  background-color: #fffdfa;
+  box-shadow: 10px -10px 100px 0 rgba(0, 0, 0, 0.2);
+  transform: translateX(-120%);
+  transition: transform 0.6s;
 }
 .construction__content .mark.open {
   transform: translateX(0);
 }
-.construction__content .mark__thumb {
-  height: 23.8125em;
-  flex: none;
+.construction__content .mark__content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.construction__content .mark__slider {
   position: relative;
+  flex: none;
+}
+.construction__content .mark__slider .swiper-slide {
+  box-shadow: rgba(0, 0, 0, 0.3) 0 19px 38px, rgba(0, 0, 0, 0.22) 0 15px 12px;
+}
+.construction__content .mark__img {
+  height: 23.75em;
+}
+.construction__content .mark__control {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: 1px solid #000;
+  z-index: 1;
 }
 .construction__content .mark__body {
   flex-grow: 1;
-  padding: 3.125em;
+  padding: 2.5em;
+  color: #292929;
 }
 .construction__content .mark__title {
-  font-size: 2.125em;
+  font-family: "Brandon Grotesque";
+  font-size: 2.375em;
   font-weight: 400;
-  margin-bottom: 0.6em;
+  line-height: 1.1;
+  text-transform: uppercase;
 }
 .construction__content .mark__place {
-  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  font-size: 0.875em;
+  font-weight: 500;
+  line-height: 1.5;
+  text-transform: uppercase;
+  text-align: justify;
+  margin-top: 1em;
+}
+.construction__content .mark__place:before {
+  content: "";
+  font-family: "icon";
+  font-size: 1.286em;
 }
 .construction__content .mark__text {
-  text-transform: none;
-  line-height: 1.5;
-  color: #514b42;
+  margin-top: 1.5em;
 }
-.construction__content .mark__text a {
+.construction__content .mark__text p {
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.5;
+  text-align: justify;
+  color: #524D43;
+}
+.construction__content .mark__text p a {
   color: inherit;
-  text-decoration: none;
-  font-weight: 700;
+  font-weight: 500;
 }
 .construction__content .mark__foot {
-  padding: 0 3.125em 3.125em;
+  padding: 0 2.5em 2.5em;
 }
-.construction__content .mark__link {
-  color: inherit;
-  text-transform: uppercase;
-  font-weight: 700;
+.construction__content .mark__foot .btn {
+  align-items: flex-start;
+}
+.construction__content .mark__foot .btn span {
+  width: 18em;
 }
 .construction__content .mark__close {
-  right: 1.5625em;
-  top: 1.5625em;
-  width: 1.25em;
-  height: 1.25em;
   position: absolute;
+  right: 0.9375em;
+  top: 0.9375em;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 2em;
+  height: 2em;
+  color: #292929;
   cursor: pointer;
   z-index: 2;
 }
-.construction__content .mark__close:after, .construction__content .mark__close:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  left: 0;
-  display: block;
-  border-top: 1px solid #292929;
-}
 .construction__content .mark__close:before {
-  transform: rotate(45deg);
-}
-.construction__content .mark__close:after {
-  transform: rotate(-45deg);
-}
-.construction__content .markSlider {
-  position: relative;
-}
-.construction__content .markSlider__slide img {
-  display: block;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-.construction__content .markSlider__action {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: absolute;
-  z-index: 2;
-  right: 0;
-  bottom: 0;
-  height: 3em;
-  width: 7.8125em;
-  padding: 0.2em 0.8em;
-  color: #fffdfa;
-  border: 1px solid #000;
-}
-.construction__content .markSlider__next, .construction__content .markSlider__prev {
-  border-top: 2px solid #fff;
-  border-right: 2px solid #fff;
-  width: 0.4em;
-  height: 0.4em;
-}
-.construction__content .markSlider__next {
-  transform: rotate(-135deg);
-}
-.construction__content .markSlider__count {
-  font-size: 0.875em;
-  font-weight: 500;
-}
-.construction__content .markSlider__prev {
-  transform: rotate(45deg);
+  content: "";
+  font-family: "icon";
+  font-size: 1.5em;
 }
 
 /* Footer
@@ -2034,32 +2025,58 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
 }
 
 .btn {
-  display: inline-block;
-  padding: 1em 2em;
-  border-radius: 1em;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+  padding: 0;
+  border-radius: 0;
   border: none;
   outline: none;
-  max-width: 100%;
+  width: 100%;
   font-family: "Archivo";
   font-size: 1em;
-  font-weight: 400;
+  font-weight: 600;
   text-decoration: none;
-  text-align: center;
-  color: #524D43;
-  background-color: #948D7C;
+  text-align: left;
+  line-height: 1.3;
+  text-transform: uppercase;
+  color: #292929;
+  background-color: transparent;
   cursor: pointer;
   transition: 0.3s;
 }
-.btn:hover {
-  background-color: #cbcbcb;
-  color: #524D43;
+.btn span {
+  flex: none;
+  font-size: 1.25em;
 }
-.btn:active, .btn:focus {
-  background-color: #c4c4c4;
-  color: #524D43;
+.btn:after {
+  content: "";
+  font-family: "icon";
+  font-size: 1em;
+}
+.btn:before {
+  content: "";
+  position: absolute;
+  bottom: -0.75em;
+  left: 0;
+  display: block;
+  width: 0;
+  height: 0.125em;
+  background-color: #292929;
+  opacity: 0;
+}
+@media (min-width: 768px) {
+  .btn:before {
+    transition: 0.8s;
+  }
+}
+.btn:hover:before {
+  width: 100%;
+  opacity: 1;
 }
 .btn:disabled {
-  color: red;
   cursor: not-allowed;
 }
 
@@ -2347,6 +2364,12 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
   justify-content: space-between;
   width: 6em;
 }
+.swiper-control.dark {
+  background-color: #292929;
+  width: 8em;
+  height: 3em;
+  padding: 0 0.625em;
+}
 
 .swiper-arrow {
   flex: none;
@@ -2364,6 +2387,9 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
 .swiper-arrow:before {
   font-size: 0.75em;
 }
+.dark .swiper-arrow {
+  color: #fffdfa;
+}
 .swiper-arrow.swiper-button-disabled {
   opacity: 0.5;
   cursor: not-allowed;
@@ -2374,4 +2400,7 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
   font-size: 0.875em;
   font-weight: 500;
   color: #292929;
+}
+.dark .swiper-pagination {
+  color: #fffdfa;
 }
