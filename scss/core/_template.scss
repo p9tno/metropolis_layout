@@ -100,37 +100,6 @@ body {
 	}
 }
 
-.snakeline {
-	a {
-		position: relative;
-		text-decoration: none;
-
-		&:after {
-			content: '';
-			position: absolute;
-			display: inline-block;
-			width: 100%;
-			left: 0;
-			bottom: -0.125em;
-			border-bottom: 0.125em solid;
-			border-color: inherit;
-
-			@media (min-width: 768px) {
-				transition: width 0.3s;
-			}
-		}
-
-		@media (min-width: 768px) {
-			&:hover {
-				&:after {
-					width: 65%;
-				}
-			}
-		}
-
-	}
-}
-
 .list {
 	margin: 0;
 	padding: 0;
@@ -144,36 +113,9 @@ body {
 .counter-item {
 	counter-increment: line;
 
-	&:nth-child(n+10) {
-		.counter-el {
-			&:before {
-				content: none;
-
-			}
-		}
-	}
-
 	.counter-el {
 		&:before {
-			content: '0';
-
+			content: counter(line, decimal-leading-zero);
 		}
-
-		&:after {
-			content: counter(line) ' ';
-		}
-
 	}
 }
-
-// По счетчикам элементов с нулям впереди на будущее
-// li:before {
-//   counter-increment: li;
-//   content: counter(item, decimal-leading-zero);
-// }
-
-// При чем есть варинаты через :nth-child(-n+9) сделать
-
-// * {
-// 	border: 1px solid #000;
-// }

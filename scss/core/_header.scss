@@ -51,16 +51,16 @@
 				font-size: 1.25em;
 
 				position: relative;
-				margin-left: 1.875em;
+				margin-left: 1.475em;
 
 				&:before {
 					content: '';
 					position: absolute;
 					top: 50%;
 					transform: translateY(-50%);
-					left: -1em;
+					left: -0.8em;
 					display: block;
-					height: 100%;
+					height: 84%;
 					background-color: $second_color;
 					width: 0.125em;
 				}
