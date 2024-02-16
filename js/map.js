@@ -26,11 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         map.fitBounds(bounds);
 
-
-
         mapMarkers.forEach(({ title, position, place, text, link, images, icon }, i) => {
-            // console.log(title, position);
-
             const addMarker = () => {
                 const marker = new google.maps.Marker({
                     icon: icon,
@@ -63,17 +59,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function onVisible( selector, callback, repeat = false ) {
-
         let options = {
             threshold: [ 0.5 ]
         };
         let observer = new IntersectionObserver( onEntry, options );
         let elements = document.querySelectorAll( selector );
-
         for ( let elm of elements ) {
             observer.observe( elm );
         }
-
         function onEntry( entry ) {
             entry.forEach( change => {
                 let elem = change.target;
@@ -92,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     onVisible( '.construction', function ( e ) {
         console.log('initMap');
         initMap();
+        document.getElementById('map').classList.add('show');
     } );
 
     // initMap();
@@ -131,9 +125,11 @@ document.addEventListener('DOMContentLoaded', () => {
 			</div>
 
 			<div class="mark__body">
-				<div class="mark__title">${title}</div>
-				<div class="mark__place">${place}</div>
-				<div class="mark__text">${text}</div>
+                <div class="mark__scrolled">
+                    <div class="mark__title">${title}</div>
+                    <div class="mark__place">${place}</div>
+                    <div class="mark__text">${text}</div>
+                </div>
 			</div>
 			<div class="mark__foot">
 				<a class="btn" href="${link}">

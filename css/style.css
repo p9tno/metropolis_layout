@@ -1289,7 +1289,17 @@ body {
 }
 .construction__content .map {
   width: 100%;
-  height: 50em;
+  height: 44.25em;
+}
+@media (min-width: 768px) {
+  .construction__content .map {
+    height: 50em;
+    transform: translateY(-50em);
+    transition: transform 0.6s;
+  }
+  .construction__content .map.show {
+    transform: translateY(0);
+  }
 }
 .construction__content .map__wrap {
   overflow: hidden;
@@ -1302,12 +1312,17 @@ body {
   bottom: 0;
   display: flex;
   flex-direction: column;
-  width: 35.875em;
+  width: 100%;
   border: 1px solid #D0CABF;
   background-color: #fffdfa;
   box-shadow: 10px -10px 100px 0 rgba(0, 0, 0, 0.2);
   transform: translateX(-120%);
   transition: transform 0.6s;
+}
+@media (min-width: 768px) {
+  .construction__content .mark {
+    width: 35.875em;
+  }
 }
 .construction__content .mark.open {
   transform: translateX(0);
@@ -1325,69 +1340,154 @@ body {
   box-shadow: rgba(0, 0, 0, 0.3) 0 19px 38px, rgba(0, 0, 0, 0.22) 0 15px 12px;
 }
 .construction__content .mark__img {
-  height: 23.75em;
+  height: 17.5em;
+}
+@media (min-width: 768px) {
+  .construction__content .mark__img {
+    height: 23.75em;
+  }
 }
 .construction__content .mark__control {
   position: absolute;
   bottom: 0;
   right: 0;
-  border: 1px solid #000;
   z-index: 1;
+  font-size: 0.75em;
+}
+@media (min-width: 768px) {
+  .construction__content .mark__control {
+    font-size: 1em;
+  }
 }
 .construction__content .mark__body {
   flex-grow: 1;
-  padding: 2.5em;
   color: #292929;
+  padding: 2.125em 0.75em 1.25em 1.25em;
+}
+@media (min-width: 768px) {
+  .construction__content .mark__body {
+    padding: 2.5em 2em 2.5em 2.5em;
+  }
+}
+.construction__content .mark__scrolled {
+  overflow: hidden overlay;
+  height: 17.75em;
+  padding-right: 0.5em;
+}
+@media (min-width: 768px) {
+  .construction__content .mark__scrolled {
+    height: 15.625em;
+  }
+  .construction__content .mark__scrolled::-webkit-scrollbar {
+    width: 1.25em;
+    height: 1.25em;
+  }
+  .construction__content .mark__scrolled::-webkit-scrollbar-button {
+    display: none;
+  }
+  .construction__content .mark__scrolled::-webkit-scrollbar-thumb {
+    background: rgba(41, 41, 41, 0.125);
+    border-radius: 1.25em;
+    border: 0.5em solid transparent;
+    background-clip: content-box;
+    min-height: 3em;
+  }
 }
 .construction__content .mark__title {
   font-family: "Brandon Grotesque";
-  font-size: 2.375em;
+  font-size: 1.75em;
   font-weight: 400;
   line-height: 1.1;
   text-transform: uppercase;
 }
+@media (min-width: 768px) {
+  .construction__content .mark__title {
+    font-size: 2.375em;
+  }
+}
 .construction__content .mark__place {
-  display: flex;
-  align-items: center;
+  position: relative;
+  padding-left: 1.5em;
   font-size: 0.875em;
   font-weight: 500;
   line-height: 1.5;
   text-transform: uppercase;
   text-align: justify;
-  margin-top: 1em;
+  margin-top: 0.875em;
+}
+@media (min-width: 768px) {
+  .construction__content .mark__place {
+    margin-top: 1em;
+  }
 }
 .construction__content .mark__place:before {
+  position: absolute;
   content: "";
   font-family: "icon";
   font-size: 1.286em;
+  top: 50%;
+  transform: translateY(-51%);
+  left: 0;
 }
 .construction__content .mark__text {
-  margin-top: 1.5em;
+  margin-top: 0.875em;
+}
+@media (min-width: 768px) {
+  .construction__content .mark__text {
+    margin-top: 1.5em;
+  }
 }
 .construction__content .mark__text p {
-  font-size: 1em;
+  font-size: 0.875em;
   font-weight: 300;
   line-height: 1.5;
   text-align: justify;
   color: #524D43;
 }
+.construction__content .mark__text p:first-child {
+  margin-top: 0;
+}
+.construction__content .mark__text p:last-child {
+  margin-bottom: 0;
+}
 .construction__content .mark__text p a {
   color: inherit;
   font-weight: 500;
+  text-decoration: none;
+  display: block;
+  margin-top: 1em;
+}
+@media (min-width: 768px) {
+  .construction__content .mark__text p a {
+    margin-top: 0;
+    display: inline;
+  }
+}
+@media (min-width: 768px) {
+  .construction__content .mark__text p {
+    font-size: 1em;
+  }
 }
 .construction__content .mark__foot {
-  padding: 0 2.5em 2.5em;
+  padding: 0 1.25em 2.125em;
+}
+@media (min-width: 768px) {
+  .construction__content .mark__foot {
+    padding: 0 2.5em 2.5em;
+  }
 }
 .construction__content .mark__foot .btn {
   align-items: flex-start;
 }
-.construction__content .mark__foot .btn span {
-  width: 18em;
+@media (min-width: 768px) {
+  .construction__content .mark__foot .btn span {
+    width: 18em;
+  }
 }
 .construction__content .mark__close {
   position: absolute;
-  right: 0.9375em;
-  top: 0.9375em;
+  right: 0.5em;
+  top: 0.5em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1397,10 +1497,21 @@ body {
   cursor: pointer;
   z-index: 2;
 }
+@media (min-width: 768px) {
+  .construction__content .mark__close {
+    right: 0.9375em;
+    top: 0.9375em;
+  }
+}
 .construction__content .mark__close:before {
   content: "";
   font-family: "icon";
-  font-size: 1.5em;
+  font-size: 1.125em;
+}
+@media (min-width: 768px) {
+  .construction__content .mark__close:before {
+    font-size: 1.5em;
+  }
 }
 
 /* Footer
@@ -2025,7 +2136,6 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
 }
 
 .btn {
-  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
@@ -2048,33 +2158,44 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
   transition: 0.3s;
 }
 .btn span {
-  flex: none;
-  font-size: 1.25em;
+  font-size: 1em;
+}
+@media (min-width: 768px) {
+  .btn span {
+    font-size: 1.25em;
+  }
 }
 .btn:after {
   content: "";
   font-family: "icon";
   font-size: 1em;
 }
-.btn:before {
-  content: "";
-  position: absolute;
-  bottom: -0.75em;
-  left: 0;
-  display: block;
-  width: 0;
-  height: 0.125em;
-  background-color: #292929;
-  opacity: 0;
-}
 @media (min-width: 768px) {
+  .btn {
+    position: relative;
+  }
+  .btn:before {
+    content: "";
+    position: absolute;
+    bottom: -0.75em;
+    left: 0;
+    display: block;
+    width: 0;
+    height: 0.125em;
+    background-color: #292929;
+    opacity: 0;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
   .btn:before {
     transition: 0.8s;
   }
 }
-.btn:hover:before {
-  width: 100%;
-  opacity: 1;
+@media (min-width: 768px) {
+  .btn:hover:before {
+    width: 100%;
+    opacity: 1;
+  }
 }
 .btn:disabled {
   cursor: not-allowed;
