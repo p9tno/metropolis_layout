@@ -25,12 +25,14 @@ block content
     section#services.services.section
         .container_center
             .services__content.counter-wrap
+                .services__img.img.desktop
+                    img(src="../../img/preview_1.webp" alt="image" loading="lazy") 
 
                 .collapse.counter-item#collapse1
-                    .collapse__title.open(data-top="#collapse1")
+                    .collapse__title(data-top="#collapse1")
                         span Home Remodeling
                         i.counter-el
-                    .collapse__body.open
+                    .collapse__body
                         p Do you have a mid-century home in need of a serious renovation? Maybe a newer home that needs a refresh? Metropolis Drafting and Construction can help you with any remodeling needs for your entire home. We are fully licensed and experienced in all aspects of home remodeling from kitchen and bath to room additions. From your project manager, to the onsite supervisor and to our fantastic crew, our team is experienced, competent and friendly.
 
                         p All projects begin with a free in-home design consultation. One of our designers will visit your home to take measurements of your existing space and talk to you about what you hope to achieve. Your designer will work with you to clarify your vision and then return to our showroom to incorporate it into a design for you. A second meeting will allow you to view your vision in high definition 3-D and 2D drafts for your upcoming remodeling project. 
@@ -39,8 +41,10 @@ block content
                             a(href="#") learn more about home remodeling
 
 
-                        .collapse__img.img.open
+                        .collapse__img.img.mobile
                             img(src="../../img/collapse_1.webp" alt="image" loading="lazy")
+                    .collapse__img.img.desktop
+                        img(src="../../img/collapse_1.webp" alt="image" loading="lazy")
 
                 each item in [ {img: '2', title: 'Kitchen Remodeling', id: '2'}, {img: '1', title: 'Bathroom Remodeling', id: '3'} , {img: '2', title: 'Room Addition', id: '4'}, {img: '1', title: 'Blueprints & Drafting', id: '5'}, {img: '2', title: '3D Design', id: '6'} ]
 
@@ -57,7 +61,9 @@ block content
                                 a(href="#") learn more about home remodeling
 
 
-                            .collapse__img.img
+                            .collapse__img.img.mobile
                                 img(src="../../img/collapse_"+item.img+".webp" alt="image" loading="lazy")
+                        .collapse__img.img.desktop
+                            img(src="../../img/collapse_"+item.img+".webp" alt="image" loading="lazy")
 
     // end services

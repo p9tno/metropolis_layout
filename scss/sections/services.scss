@@ -8,6 +8,29 @@
         @media (min-width: 768px) {
             position: relative;
             min-height: 34em;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+
+                display: block;
+                width: 27em;
+                z-index: 1;
+            }
+        }
+    }
+
+    &__img {
+        @media (min-width: 768px) {
+            width: 26.5625em;
+            height: 30em;
+
+            position: absolute;
+            top: 0;
+            left: 0;
         }
     }
 
@@ -22,17 +45,19 @@
         padding-bottom: 3.25em;
         margin-bottom: 1.1875em;
 
+        width: 73.125em;
+        margin-left: auto;
+
+        &:hover {
+            .collapse__img {
+                opacity: 1;
+            }
+        }
     }
 
     &:last-child {
         border-bottom: 0;
         margin-bottom: 0;
-    }
-
-    @media (min-width: 768px) {
-        width: 73.125em;
-        margin-left: auto;
-
     }
 
     &__title {
@@ -187,12 +212,9 @@
             top: 0;
             left: 0;
 
-            opacity: 0;
             transition: 0.6s;
+            opacity: 0;
 
-            &.open {
-                opacity: 1;
-            }
         }
     }
 
