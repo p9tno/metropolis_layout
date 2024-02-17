@@ -1,0 +1,362 @@
+.portfolio {
+    &__header {}
+
+    &__main {
+
+        @media (min-width: 768px) {
+            margin-top: 3.75em;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 1.25em;
+            grid-row-gap: 3.75em;
+            grid-auto-rows: minmax(37.5em, auto);
+        }
+    }
+
+    &__item {
+        display: block;
+        cursor: pointer;
+        text-decoration: none;
+
+        margin-top: 2.5em;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        @media (min-width: 768px) {
+            margin-top: 0;
+        }
+
+        &:nth-child(5n+1) {
+            background-color: $color_light;
+
+            margin: 2.5em -1.25em 0;
+            padding: 2.125em 1.25em 0;
+
+            @media (min-width: 768px) {
+                margin: 0;
+                padding: 0;
+                grid-column-start: 1;
+                grid-column-end: 4;
+            }
+
+            .portfolio__content {
+                display: flex;
+                flex-direction: column-reverse;
+                height: 100%;
+
+                @media (min-width: 768px) {
+                    flex-direction: row;
+                }
+
+                .portfolio__img {
+                    @media (min-width: 768px) {
+                        flex-grow: 1;
+                        height: 100%;
+                    }
+                }
+
+                .portfolio__box {
+                    flex: none;
+                    display: flex;
+                    flex-direction: column;
+
+                    height: 100%;
+                    margin-top: 0;
+
+                    @media (min-width: 768px) {
+                        width: 37.0625em;
+                        padding: 5em;
+                    }
+
+                    .portfolio__locatin {
+                        display: block;
+                        @media (max-width: 767px) {
+                            &:after {
+                                content: none;
+                            }
+                        }
+                    }
+                }
+
+                .portfolio__title {
+                    &:after {
+                        content: none;
+                    }
+                }
+            }
+
+            .portfolio__text {
+                display: block;
+            }
+
+            .portfolio__locatin {
+                display: none;
+                margin-top: 1.45em;
+                @media (min-width: 768px) {
+                    margin-top: auto;
+                }
+            }
+
+        }
+
+        &:nth-child(5n) {
+            margin: 2.5em -1.25em 0;
+
+            @media (min-width: 768px) {
+                margin: 0;
+                grid-column-start: 1;
+                grid-column-end: 4;
+            }
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 0.125em;
+            @media (max-width: 767px) {
+                grid-auto-rows: 17.5em 8.75em;
+            }
+            @media (min-width: 768px) {
+                grid-template-columns: 72.9375em 35.8125em;
+                grid-gap: 1.25em;
+            }
+
+            > * {
+                &:first-child {
+                    @media (max-width: 767px) {
+                        grid-column-start: 1;
+                        grid-column-end: 3;
+                    }
+                    @media (min-width: 768px) {
+                        grid-row-start: 1;
+                        grid-row-end: 3;
+                    }
+                }
+
+            }
+
+            .portfolio__content {
+                .portfolio__img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    margin: 0;
+                }
+
+                .portfolio__box {
+                    position: relative;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    height: 100%;
+
+                    padding: 1.25em;
+                    margin-top: 0;
+
+                    @media (min-width: 768px) {
+                        padding: 3.75em;
+                    }
+
+                    .portfolio__locatin {
+                        display: block;
+                        @media (max-width: 767px) {
+                            margin-top: 0.625em;
+                        }
+                    }
+                }
+
+                .portfolio__cat {
+                    color: #F5F3EF;
+                }
+
+                .portfolio__locatin,
+                .portfolio__title {
+                    color: $color_white;
+                };
+
+                .portfolio__locatin {
+                    @media (max-width: 767px) {
+                        display: none;
+                    }
+                }
+            }
+
+            .portfolio__img {
+                display: block;
+                height: 100%;
+            }
+        }
+
+    }
+
+    &__box {
+        .portfolio__locatin {
+            display: none;
+            @media (min-width: 768px) {
+                display: block;
+            }
+        }
+
+        @media (min-width: 768px) {
+            margin-top: 2.5em;
+        }
+    }
+
+    &__img {
+        display: none;
+        height: 17.5em;
+        @media (min-width: 768px) {
+            height: 25em;
+            overflow: hidden;
+        }
+    }
+
+    &__content {
+        position: relative;
+
+        @media (max-width: 767px) {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .portfolio__img {
+            display: block;
+            margin: 1.25em 0;
+        }
+    }
+
+    &__cat {
+        font-size: 0.75em;
+        font-weight: 500;
+        line-height: 1.5;
+        text-transform: uppercase;
+        color: #938B7C;
+        @media (min-width: 768px) {
+            font-size: 0.875em;
+        }
+    }
+
+    &__title {
+        position: relative;
+
+        font-family: $second_font_family;
+        font-size: 1.75em;
+        font-weight: 400;
+        line-height: 1.1;
+        letter-spacing: -0.05em;
+        text-transform: uppercase;
+        color: $second_color;
+        margin-top: 0.125em;
+        @media (min-width: 768px) {
+            font-size: 2.375em;
+            margin-top: 0.369em;
+
+        }
+
+        &:after {
+            @media (min-width: 768px) {
+                content: '\e900';
+                font-family: 'icon';
+                font-size: 0.579em;
+
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 0;
+            }
+        }
+
+    }
+
+    &__text {
+        display: none;
+        margin-top: 0.75em;
+        @media (min-width: 768px) {
+            margin-top: 1.5em;
+        }
+
+        p {
+            font-size: 0.875em;
+            font-weight: 300;
+            line-height: 1.5;
+            margin: 0.625em 0;
+            @media (min-width: 768px) {
+                font-size: 1em;
+
+            }
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: 600;
+            color: $main_color;
+            display: block;
+            margin-top: 0.625em;
+            @media (min-width: 768px) {
+                display: inline;
+                margin-top: 0;
+            }
+        }
+    }
+
+    &__locatin {
+        position: relative;
+        font-size: 0.875em;
+        font-weight: 500;
+        line-height: 1.5;
+        text-transform: uppercase;
+        color: $second_color;
+        padding: 0 1.4em;
+
+        @media (min-width: 768px) {
+            padding: 0 0 0 1.4em;
+            font-size: 1.25em;
+            margin-top: 0.7em;
+            display: none;
+        }
+
+        &:after,
+        &:before {
+            font-family: 'icon';
+            display: block;
+
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+
+        }
+
+        &:before {
+            content: '\e908';
+            font-size: 1.125em;
+            left: 0;
+            @media (min-width: 768px) {
+                font-size: 0.9em;
+            }
+        }
+        @media (max-width: 767px) {
+            &:after {
+                content: '\e900';
+                font-size: 0.9em;
+                right: 0;
+            }
+
+        }
+
+    }
+
+    &__footer {}
+
+}
