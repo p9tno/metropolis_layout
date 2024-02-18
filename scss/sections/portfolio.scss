@@ -1,5 +1,26 @@
 .portfolio {
-    &__header {}
+    padding-top: 0;
+    @media (min-width: 768px) {
+        padding-top: 1.25em;
+    }
+
+    &__header {
+        @media (min-width: 768px) {
+            position: relative;
+        }
+    }
+
+    &__category {
+        margin-top: 1em;
+        @media (min-width: 768px) {
+            margin-top: 0;
+            position: absolute;
+            top: 0.625em;
+            right: 0;
+            width: 65.375em;
+            z-index: 1;
+        }
+    }
 
     &__main {
 
@@ -226,6 +247,9 @@
         .portfolio__img {
             display: block;
             margin: 1.25em 0;
+            @media (min-width: 768px) {
+                margin: 0;
+            }
         }
     }
 
@@ -356,7 +380,5 @@
         }
 
     }
-
-    &__footer {}
 
 }

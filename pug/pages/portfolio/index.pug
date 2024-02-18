@@ -29,66 +29,86 @@ block content
 
             .portfolio__header
                 h1.section__title portfolio
-                .portfolio__cat
+                .portfolio__category
+                    .category
+                        .category__head
+                            .category__label
+                                span Project category:
+                            .category__toggle
+                            .category__item.filter-cat-js
+                                input(type="radio" id="term_id_1" name="cat_name" value="term_id_1" checked)
+                                label(for="term_id_1")
+                                    span All
+                                    i 116
+
+
+
+                        .category__list
+                            each item in [ {id: '2', label: 'Home Remodeling', i: '116'}, {id: '3', label: 'Kitchen Remodeling', i: '16'}, {id: '4', label: 'Bathroom Remodeling', i: '28'}, {id: '5', label: 'Room Addition', i: '52'}, {id: '7', label: 'Blueprints & Drafting', i: '23'}, {id: '6', label: '3D Design', i: '12'}, ]
+
+                                .category__item.filter-cat-js
+                                    input(type="radio" id="term_id_"+item.id+"" name="cat_name" value="term_id_"+item.id+"")
+                                    label(for="term_id_"+item.id+"")
+                                        span=item.label
+                                        i=item.i
+
+
+
+
+
 
             .portfolio__main
-                each item in ['', '', ]
+
+                each item in [{img: '1', cat: 'Kitchen Remodeling', title: '1208 N. Lima St. ', loation: 'Burbank'}, {img: '2', cat: 'Kitchen Remodeling', title: '15 Castilian Ct. ', loation: 'Thousand Oaks'}, {img: '3', cat: 'Kitchen Remodeling', title: '1337 E. Palmer Dr.', loation: 'Glendale'}, {img: '4', cat: 'Kitchen Remodeling, Complete remodeling', title: '837 N. Lima St.', loation: 'Burbank'},]
 
 
-                    each item in [{img: '1', cat: 'Kitchen Remodeling', title: '1208 N. Lima St. ', loation: 'Burbank'}, {img: '2', cat: 'Kitchen Remodeling', title: '15 Castilian Ct. ', loation: 'Thousand Oaks'}, {img: '3', cat: 'Kitchen Remodeling', title: '1337 E. Palmer Dr.', loation: 'Glendale'}, {img: '4', cat: 'Kitchen Remodeling, Complete remodeling', title: '837 N. Lima St.', loation: 'Burbank'},]
-
-
-                        .portfolio__item(href="#")
-                            .portfolio__content
-                                .portfolio__locatin=item.loation
-                                .portfolio__img.img
-                                    img(src="../../img/portfolio_"+item.img+".webp" alt="image" loading="lazy")
-                                .portfolio__box
-                                    .portfolio__cat=item.cat
-                                    .portfolio__title=item.title
-                                    .portfolio__text
-                                        p European modern meets Burbank mid-century bungalow.
-                                        p Who said that a Burbank bungalow home needs to be doll and old fashioned.
-                                        p In this Burbank remodeling project, we took this 1200sq. bungalow home and turned it to a wonderful mixture of European modern kitchen & bathrooms and calm transitional mid-century modern furniture and flooring.
-                                        p The kitchen was a true challenge since space was a rare commodity, but with the right layout storage and workspace became abundant. <a href="">Read More</a> 
-                                    .portfolio__locatin=item.loation
-
-                            .portfolio__img.img
-                                img(src="../../img/portfolio_"+item.img+".webp" alt="image" loading="lazy")
-
-                            .portfolio__img.img
-                                img(src="../../img/portfolio_"+item.img+".webp" alt="image" loading="lazy")
-
-                    .portfolio__item
+                    .portfolio__item(href="#")
                         .portfolio__content
-                            .portfolio__locatin GLENDALE
+                            .portfolio__locatin=item.loation
                             .portfolio__img.img
-                                img(src="../../img/portfolio_5_1.webp" alt="image" loading="lazy")
+                                img(src="../../img/portfolio_"+item.img+".webp" alt="image" loading="lazy")
                             .portfolio__box
-                                .portfolio__cat general Remodeling
-                                .portfolio__title Arcadia
+                                .portfolio__cat=item.cat
+                                .portfolio__title=item.title
                                 .portfolio__text
                                     p European modern meets Burbank mid-century bungalow.
                                     p Who said that a Burbank bungalow home needs to be doll and old fashioned.
                                     p In this Burbank remodeling project, we took this 1200sq. bungalow home and turned it to a wonderful mixture of European modern kitchen & bathrooms and calm transitional mid-century modern furniture and flooring.
                                     p The kitchen was a true challenge since space was a rare commodity, but with the right layout storage and workspace became abundant. <a href="">Read More</a> 
-
-                                .portfolio__locatin GLENDALE
-
-                        .portfolio__img.img
-                            img(src="../../img/portfolio_5_2.webp" alt="image" loading="lazy")
+                                .portfolio__locatin=item.loation
 
                         .portfolio__img.img
-                            img(src="../../img/portfolio_5_3.webp" alt="image" loading="lazy")
+                            img(src="../../img/portfolio_"+item.img+".webp" alt="image" loading="lazy")
 
+                        .portfolio__img.img
+                            img(src="../../img/portfolio_"+item.img+".webp" alt="image" loading="lazy")
 
+                .portfolio__item
+                    .portfolio__content
+                        .portfolio__locatin GLENDALE
+                        .portfolio__img.img
+                            img(src="../../img/portfolio_5_1.webp" alt="image" loading="lazy")
+                        .portfolio__box
+                            .portfolio__cat general Remodeling
+                            .portfolio__title Arcadia
+                            .portfolio__text
+                                p European modern meets Burbank mid-century bungalow.
+                                p Who said that a Burbank bungalow home needs to be doll and old fashioned.
+                                p In this Burbank remodeling project, we took this 1200sq. bungalow home and turned it to a wonderful mixture of European modern kitchen & bathrooms and calm transitional mid-century modern furniture and flooring.
+                                p The kitchen was a true challenge since space was a rare commodity, but with the right layout storage and workspace became abundant. <a href="">Read More</a> 
 
+                            .portfolio__locatin GLENDALE
 
+                    .portfolio__img.img
+                        img(src="../../img/portfolio_5_2.webp" alt="image" loading="lazy")
 
+                    .portfolio__img.img
+                        img(src="../../img/portfolio_5_3.webp" alt="image" loading="lazy")
 
-
-
-            .portfolio__footer
+            .section__more
+                a(href="#") 
+                    span see more Projects
+                    i (16)
 
 
 
