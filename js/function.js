@@ -352,14 +352,14 @@ $(document).ready(function() {
     function uploadYoutubeVideo() {
         if ( $( ".js-youtube" ) ) {
 
-            $( ".js-youtube" ).each( function () {
-                // Зная идентификатор видео на YouTube, легко можно найти его миниатюру
-                $( this ).css( 'background-image', 'url(http://i.ytimg.com/vi/' + this.id + '/sddefault.jpg)' );
-
-                // Добавляем иконку Play поверх миниатюры, чтобы было похоже на видеоплеер
-                $( this ).append( $( '<img src="../wp-content/themes/gymn/assets/img/play.png" alt="Play" class="video__play">' ) );
-
-            } );
+            // $( ".js-youtube" ).each( function () {
+            //     // Зная идентификатор видео на YouTube, легко можно найти его миниатюру
+            //     $( this ).css( 'background-image', 'url(http://i.ytimg.com/vi/' + this.id + '/sddefault.jpg)' );
+            //
+            //     // Добавляем иконку Play поверх миниатюры, чтобы было похоже на видеоплеер
+            //     $( this ).append( $( '<img src="../wp-content/themes/gymn/assets/img/play.png" alt="Play" class="video__play">' ) );
+            //
+            // } );
 
             $( '.video__play, .video__prev' ).on( 'click', function () {
                 // создаем iframe со включенной опцией autoplay
@@ -382,7 +382,7 @@ $(document).ready(function() {
             } );
         }
     };
-    // uploadYoutubeVideo();
+    uploadYoutubeVideo();
 
     function uploadYoutubeVideoForModal() {
         if ( $( ".youtubeModal_js" ) ) {
