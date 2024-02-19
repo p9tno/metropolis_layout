@@ -37,42 +37,40 @@
                             p With a mid-century / Asian design theme wood look large porcelain tiles and slate floor material  we create a spa feeling and a sensation of space.
 
                         .project__recall
-                            //- .recall__item
-                            //-     .recall__title
-                            //-     .recall__text
-                            //-     .recall__person
-                            //-         .person
-                            //-             .person__img.img
-                            //-                 img(src="../../img/person.webp" alt="image" loading="lazy")
-                            //-             .person__info
-                            //-                 span Leor & Gordon Ownby
-                            //-                 span 3715 Los Olivos Ln. Glendale Angeles, CA
+                            .recall__box
+                                .recall__title client testimonial
+                                .recall__text
+                                    p Jonathan is everything you should be looking for in a general contractor: He listens to what you you want from your project, he has a keen sense of design and aesthetics, he has a stellar collection of subcontractors, and he is responsive with knowledgeable advice for your inevitable mid-project questions. We are now enjoying our small but gem-like kitchen remodel with nothing but good thoughts on the road  the got us here.
+                                .recall__person
+                                    .person
+                                        .person__img.img
+                                            img(src="../../img/person.webp" alt="image" loading="lazy")
+                                        .person__info
+                                            span Leor & Gordon Ownby
+                                            span 3715 Los Olivos Ln. Glendale Angeles, CA
 
                         .project__bottom
                             a.btn(href="#")
                                 span FREE ESTIMATE
 
-                    .project__sliders
-                        //- .project__current
-                        //- .project__top
-                        //-     .swiper.project_top_js
-                        //-         .swiper-wrapper
-                        //-             each item in ['2', '1', '4', '5']
-                        //-                 .swiper-slide
-                        //-                     .project__img.img
-                        //-                         img(src="../../img/preview_"+item+".webp" alt="image" loading="lazy")
-                        //- 
-                        //-         .project__control.swiper-control.dark
-                        //-             i.swiper-arrow.icon_arrow_left
-                        //-             .swiper-pagination
-                        //-             i.swiper-arrow.icon_arrow_right 
-                        //- .project__bpttom
-                        //-     .swiper.project_bottom_js
-                        //-         .swiper-wrapper
-                        //-             each item in ['1', '2', '3', '4']
-                        //-                 .swiper-slide
-                        //-                     .project__img.img
-                        //-                         img(src="../../img/preview_"+item+".webp" alt="image" loading="lazy")
+                    .project__slider
+                        .project__fraction.desktop
+                            .fraction
+                                span.fraction__current.fraction_current_js 01
+                                .fraction__line
+                                span.fraction__all.fraction_all_js 03
+                        .swiper.project_js 
+                            .swiper-wrapper
+                                each item in ['1', '2', '3', '4', '5', '1']
+                                    .swiper-slide
+                                        .project__img.img
+                                            img(src="../../img/preview_"+item+".webp" alt="image" loading="lazy")
+
+
+                            .project__control.swiper-control.dark
+                                i.swiper-arrow.icon_arrow_left
+                                .swiper-pagination
+                                i.swiper-arrow.icon_arrow_right 
 
 
 // End modal project

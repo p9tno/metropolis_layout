@@ -237,6 +237,19 @@
         }
     }
 
+    &__title {
+        color: $second_color;
+        font-family: $second_font_family;
+        font-size: 1em;
+        font-weight: 420;
+        line-height: 1.1;
+        letter-spacing: -0.05em;
+        text-transform: uppercase;
+        @media (min-width: 768px) {
+            font-size: 1.25em;
+        }
+    }
+
 }
 
 .person {

@@ -73,7 +73,7 @@ $(document).ready(function() {
             },
 
             pagination: {
-                el: ".swiper-pagination",
+                el: ".preview__control .swiper-pagination",
                 type: "fraction",
             },
 
@@ -84,27 +84,17 @@ $(document).ready(function() {
     }
     initPreviewSliders()
 
-    function initProjectSliders() {
-        const speed = 2000;
-        const bottom = new Swiper(".project_bottom_js", {
-            slidesPerView: 1,
-            allowTouchMove: false,
-            clickable: false,
-            // loop: true,
-            speed: 2500,
-
-        });
-
-        const top = new Swiper(".project_top_js", {
+    function initProjectSlider() {
+        const project = new Swiper(".project_js", {
             slidesPerView: 1,
             allowTouchMove: false,
             clickable: false,
             // loop: true,
             speed: 2000,
 
-            // autoplay: {
-            //   delay: 5000,
-            // },
+            autoplay: {
+              delay: 5000,
+            },
 
             navigation: {
                 nextEl: '.icon_arrow_right',
@@ -113,7 +103,10 @@ $(document).ready(function() {
 
             breakpoints: {
                 768: {
-                    // autoHeight: false,
+                   // loop: false,
+                   grid: {
+                       rows: 2,
+                   },
                 },
 
             },
@@ -123,12 +116,47 @@ $(document).ready(function() {
                 type: "fraction",
             },
 
-            thumbs: {
-                swiper: bottom,
+            on: {
+                init: function (e) {
+                    console.log('swiper initialized');
+
+                    console.log(pad(Math.ceil(e.imagesToLoad.length / 2)));
+                    // console.log(e.grid.updateSlide.length);
+
+                    $('.fraction_current_js').text(pad(e.realIndex + 1));
+                    $('.fraction_all_js').text(pad(Math.ceil(e.imagesToLoad.length / 2)));
+
+
+                },
             },
+
         });
+
+        project.on('slideChange', function (e) {
+            let currentSlide = e.realIndex;
+            // console.log(currentSlide);
+            $('.project__fraction').addClass('active');
+
+            setTimeout(()=>{
+                $('.project__fraction').removeClass('active');
+                $('.fraction_current_js').text(pad(currentSlide + 1));
+            },1000);
+
+
+
+            let currentItem = $('.system__label').find(`[data-index='${currentSlide}']`);
+
+            $('.system__el').removeClass('active');
+            currentItem.addClass('active');
+            // $('.system__el').removeClass('active');
+            // currentItem.addClass('active');
+        });
+
+        function pad(n) {
+            return (n < 10) ? ("0" + n) : n;
+        }
     }
-    initProjectSliders()
+    initProjectSlider()
 
 
 
@@ -190,7 +218,7 @@ $(document).ready(function() {
                 autoplay: {
                   delay: 5000,
                 },
-                
+
                 allowTouchMove: false,
                 clickable: false,
 
