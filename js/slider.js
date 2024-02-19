@@ -118,15 +118,8 @@ $(document).ready(function() {
 
             on: {
                 init: function (e) {
-                    console.log('swiper initialized');
-
-                    console.log(pad(Math.ceil(e.imagesToLoad.length / 2)));
-                    // console.log(e.grid.updateSlide.length);
-
                     $('.fraction_current_js').text(pad(e.realIndex + 1));
                     $('.fraction_all_js').text(pad(Math.ceil(e.imagesToLoad.length / 2)));
-
-
                 },
             },
 
@@ -134,22 +127,12 @@ $(document).ready(function() {
 
         project.on('slideChange', function (e) {
             let currentSlide = e.realIndex;
-            // console.log(currentSlide);
             $('.project__fraction').addClass('active');
 
             setTimeout(()=>{
                 $('.project__fraction').removeClass('active');
                 $('.fraction_current_js').text(pad(currentSlide + 1));
             },1000);
-
-
-
-            let currentItem = $('.system__label').find(`[data-index='${currentSlide}']`);
-
-            $('.system__el').removeClass('active');
-            currentItem.addClass('active');
-            // $('.system__el').removeClass('active');
-            // currentItem.addClass('active');
         });
 
         function pad(n) {
@@ -157,48 +140,6 @@ $(document).ready(function() {
         }
     }
     initProjectSlider()
-
-
-
-
-
-    // const teamPreview = new Swiper('.teamPreview-swiper-js', {
-    //     slidesPerView: 1,
-    //     speed: 500,
-    //     loop: true,
-    //     effect: "fade",
-    //     fadeEffect: {
-    //       crossFade: true
-    //     },
-    //
-    //     allowTouchMove: false,
-    //
-    //     navigation: {
-    //         nextEl: '.icon_arrow_right',
-    //         prevEl: '.icon_arrow_left',
-    //     },
-    //     pagination: {
-    //         el: '.teamSlider__dotted',
-    //         clickable: true,
-    //     },
-    //
-    //     thumbs: {
-    //         swiper: teamSlider,
-    //     },
-    //
-    //     slideToClickedSlide: true,
-    //     autoHeight: true,
-    //
-    // });
-    // teamPreview.on('slideChange', function (e) {
-    //     // console.log('slide changed');
-    //     // console.log(e.activeIndex);
-    // });
-
-
-
-
-
 
 
 
@@ -247,62 +188,5 @@ $(document).ready(function() {
 
     }
     addRecallSliders();
-
-    function addSliders() {
-
-        let projects = $('.projects-swiper-js');
-
-        projects.each(function() {
-            let options = $(this).data('options') || {};
-            let $parent = $(this).parent();
-            let swiperDefaults = {
-
-                loop: true,
-                slidesPerView: 1,
-                allowTouchMove: false,
-
-                pagination: {
-                    el: $parent.find('.projects__dotted')[0],
-                },
-
-                navigation: {
-                    nextEl: $parent.find('.icon_arrow_right')[0],
-                    prevEl: $parent.find('.icon_arrow_left')[0],
-                },
-
-                thumbs: {
-                    swiper: {
-                        el: $parent.closest('.projects__item').find('.projects-swiper-sm-js')[0],
-                        loop: true,
-                        spaceBetween: 6,
-                        slidesPerView: 2,
-                        centeredSlides: true,
-
-                        freeMode: true,
-                        watchSlidesProgress: true,
-
-                        breakpoints: {
-                            768: {
-                                spaceBetween: 15,
-                                centeredSlides: false,
-                            },
-                        }
-                    }
-                },
-
-            };
-
-            let swiperOptions = $.extend(swiperDefaults, options),
-            mySwiper = new Swiper(this, swiperOptions);
-
-            // console.log($parent);
-            // console.log($parent.find('.projects__dotted')[0]);
-            // console.log($parent.closest('.projects__item').find('.projects-swiper-sm-js')[0]);
-        });
-
-    }
-    // addSliders();
-
-
 
 });
