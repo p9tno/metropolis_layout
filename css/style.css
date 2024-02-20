@@ -1370,11 +1370,12 @@ body {
 .construction__content .mark__scrolled {
   overflow: hidden overlay;
   height: 17.75em;
-  padding-right: 0.5em;
+  padding-right: 0.75em;
 }
 @media (min-width: 768px) {
   .construction__content .mark__scrolled {
     height: 15.625em;
+    padding-right: 1.5em;
   }
   .construction__content .mark__scrolled::-webkit-scrollbar {
     width: 1.25em;
@@ -3299,14 +3300,23 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
 }
 .modal-close {
   position: absolute;
-  width: 2.375em;
-  height: 2.375em;
-  right: 0.875em;
-  top: 0.875em;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #948D7C;
+  color: #292929;
+  width: 1.5em;
+  height: 1.5em;
+  right: 0.625em;
+  top: 0.625em;
+}
+@media (min-width: 768px) {
+  .modal-close {
+    color: #948D7C;
+    width: 2.375em;
+    height: 2.375em;
+    right: 0.875em;
+    top: 0.875em;
+  }
 }
 .modal-close:after, .modal-close:before {
   content: "";
@@ -3341,10 +3351,12 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
   position: relative;
   width: auto;
   margin: auto;
-  width: 40em;
+  padding: 1em 0;
+  width: 17.5em;
 }
 @media (min-width: 768px) {
   .modal-dialog {
+    padding: 0;
     width: 105.75em;
     margin: 0 auto auto 0;
   }
@@ -3355,9 +3367,9 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
   border-radius: 0;
   background-clip: padding-box;
   outline: 0;
-  padding: 1em 1.1em;
   background: #F5F3EF;
   box-shadow: 40px 40px 200px 0 rgba(0, 0, 0, 0.4);
+  padding: 2.5em 1.25em;
 }
 @media (min-width: 768px) {
   .modal-content {
@@ -3389,6 +3401,7 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
 @media (min-width: 768px) {
   .project__wrap {
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
   }
 }
@@ -3400,33 +3413,71 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
     width: 41.125em;
   }
 }
+@media (min-width: 768px) {
+  .project__scrolled {
+    overflow: hidden overlay;
+    height: 46.9375em;
+    padding-right: 0.5em;
+  }
+  .project__scrolled::-webkit-scrollbar {
+    width: 1.25em;
+    height: 1.25em;
+  }
+  .project__scrolled::-webkit-scrollbar-button {
+    display: none;
+  }
+  .project__scrolled::-webkit-scrollbar-thumb {
+    background: rgba(41, 41, 41, 0.125);
+    border-radius: 1.25em;
+    border: 0.5em solid transparent;
+    background-clip: content-box;
+    min-height: 3em;
+  }
+}
 .project__cat {
   color: #938B7C;
-  font-size: 0.875em;
+  font-size: 0.75em;
   font-weight: 500;
   line-height: 1.5;
   text-transform: uppercase;
 }
+@media (min-width: 768px) {
+  .project__cat {
+    font-size: 0.875em;
+  }
+}
 .project__title {
   color: #292929;
   font-family: "Brandon Grotesque";
-  font-size: 3em;
+  font-size: 1.75em;
   font-weight: 400;
   line-height: 1.1;
-  letter-spacing: -0.05em;
   text-transform: uppercase;
-  margin-top: 0.3em;
+  margin-top: 0.5em;
+}
+@media (min-width: 768px) {
+  .project__title {
+    margin-top: 0.3em;
+    font-size: 3em;
+    letter-spacing: -0.05em;
+  }
 }
 .project__location {
   position: relative;
   color: #292929;
   text-align: justify;
-  font-size: 1.25em;
   font-weight: 600;
   line-height: 1.5;
   text-transform: uppercase;
   padding-left: 1.6em;
-  margin-top: 1.2em;
+  margin-top: 0.86em;
+  font-size: 0.875em;
+}
+@media (min-width: 768px) {
+  .project__location {
+    margin-top: 1.2em;
+    font-size: 1.25em;
+  }
 }
 .project__location:before {
   content: "";
@@ -3437,7 +3488,12 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
   transform: translateY(-50%);
 }
 .project__text {
-  margin-top: 2.25em;
+  margin-top: 1.5em;
+}
+@media (min-width: 768px) {
+  .project__text {
+    margin-top: 2.25em;
+  }
 }
 .project__text p {
   font-size: 0.875em;
@@ -3457,22 +3513,42 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
   margin-bottom: 0;
 }
 .project__recall {
-  margin-top: 2.125em;
+  margin: 2.125em -1.25em 0;
+}
+@media (min-width: 768px) {
+  .project__recall {
+    margin: 2.125em 0 0;
+  }
 }
 .project__recall .recall__box {
-  padding: 2.5em;
+  padding: 2.125em 1.25em;
+}
+@media (min-width: 768px) {
+  .project__recall .recall__box {
+    padding: 2.5em;
+  }
 }
 .project__recall .recall__text {
-  margin-top: 1.5em;
+  margin-top: 0.875em;
+}
+@media (min-width: 768px) {
+  .project__recall .recall__text {
+    margin-top: 1.5em;
+  }
+}
+.project__recall .person__info span:nth-child(2) {
+  font-size: 0.75em;
+  color: #6D665A;
 }
 .project__bottom {
   margin-top: 1.875em;
 }
 .project__slider {
-  width: 100%;
+  margin: 1.5em -1.25em 0;
 }
 @media (min-width: 768px) {
   .project__slider {
+    margin: 0;
     width: 45em;
   }
 }
@@ -3482,7 +3558,7 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
     height: 100%;
     margin-left: auto;
     margin-right: auto;
-    height: 55.625em;
+    height: 44.375em;
   }
 }
 @media (min-width: 768px) {
@@ -3502,15 +3578,22 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
 }
 @media (min-width: 768px) {
   .project__img {
-    height: 27.5em;
+    height: 21.875em;
   }
 }
 .project__control {
   position: absolute;
-  top: calc(50% - 1.8em);
-  left: 50%;
-  transform: translate(-50%, -50%);
   z-index: 1;
+  bottom: 0;
+  left: 0;
+}
+@media (min-width: 768px) {
+  .project__control {
+    bottom: auto;
+    top: calc(50% - 1.8em);
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .fraction {

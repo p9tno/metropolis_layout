@@ -26,7 +26,7 @@ block content
         .container_center
             .services__content.counter-wrap
                 .services__img.img.desktop
-                    img(src="../../img/preview_1.webp" alt="image" loading="lazy") 
+                    img(src="../../img/services_d.webp" alt="image" loading="lazy") 
 
                 .collapse.counter-item#collapse1
                     .collapse__title(data-top="#collapse1")
@@ -42,11 +42,11 @@ block content
 
 
                         .collapse__img.img.mobile
-                            img(src="../../img/collapse_1.webp" alt="image" loading="lazy")
+                            img(src="../../img/services_1.webp" alt="image" loading="lazy")
                     .collapse__img.img.desktop
-                        img(src="../../img/collapse_1.webp" alt="image" loading="lazy")
+                        img(src="../../img/services_1.webp" alt="image" loading="lazy")
 
-                each item in [ {img: '2', title: 'Kitchen Remodeling', id: '2'}, {img: '1', title: 'Bathroom Remodeling', id: '3'} , {img: '2', title: 'Room Addition', id: '4'}, {img: '1', title: 'Blueprints & Drafting', id: '5'}, {img: '2', title: '3D Design', id: '6'} ]
+                each item in [ {img: '2', title: 'Kitchen Remodeling', id: '2'}, {img: '3', title: 'Bathroom Remodeling', id: '3'} , {img: '4', title: 'Room Addition', id: '4'}, {img: '5', title: 'Blueprints & Drafting', id: '5'}, {img: '6', title: '3D Design', id: '6'} ]
 
                     .collapse.counter-item(id="collapse"+item.id+"")
                         .collapse__title(data-top="#collapse"+item.id+"")
@@ -62,8 +62,8 @@ block content
 
 
                             .collapse__img.img.mobile
-                                img(src="../../img/collapse_"+item.img+".webp" alt="image" loading="lazy")
+                                img(src="../../img/services_"+item.img+".webp" alt="image" loading="lazy")
                         .collapse__img.img.desktop
-                            img(src="../../img/collapse_"+item.img+".webp" alt="image" loading="lazy")
+                            img(src="../../img/services_"+item.img+".webp" alt="image" loading="lazy")
 
     // end services

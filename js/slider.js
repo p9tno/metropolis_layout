@@ -7,18 +7,6 @@ $(document).ready(function() {
             clickable: false,
             // loop: true,
             speed: speed,
-            // effect: "creative",
-            // creativeEffect: {
-            //   prev: {
-            //     shadow: true,
-            //     translate: ["-20%", 0, -1],
-            //   },
-            //   next: {
-            //     translate: ["100%", 0, 0],
-            //     shadow: true,
-            //   },
-            // },
-
         });
 
         const sm = new Swiper(".preview_sm_js", {
@@ -30,16 +18,6 @@ $(document).ready(function() {
             thumbs: {
                 swiper: lg,
             },
-            // effect: "creative",
-            // creativeEffect: {
-            //   prev: {
-            //     // shadow: true,
-            //     translate: ["-20%", 0, -1],
-            //   },
-            //   next: {
-            //     translate: ["100%", 0, 0],
-            //   },
-            // },
         });
 
         const info = new Swiper(".preview_info_js", {
