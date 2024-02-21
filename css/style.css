@@ -3573,12 +3573,55 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
   margin-bottom: 1.25em;
 }
 .project__img {
+  position: relative;
   width: 100%;
   height: 17.5em;
 }
 @media (min-width: 768px) {
   .project__img {
     height: 21.875em;
+  }
+}
+.project__img.before:before {
+  content: "before";
+  position: absolute;
+  top: 2.67365em;
+  left: 0;
+  display: block;
+  padding: 1.073em;
+  min-width: 7.864em;
+  color: #292929;
+  background-color: #ffffff;
+  text-align: center;
+  font-size: 0.675em;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .project__img.before:before {
+    font-size: 0.875em;
+  }
+}
+.project__img.after:before {
+  content: "after";
+  position: absolute;
+  top: 2.67365em;
+  left: 0;
+  display: block;
+  padding: 1.073em;
+  min-width: 7.864em;
+  color: #292929;
+  background-color: #ffffff;
+  text-align: center;
+  font-size: 0.675em;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .project__img.after:before {
+    font-size: 0.875em;
   }
 }
 .project__control {

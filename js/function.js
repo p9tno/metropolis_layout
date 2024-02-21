@@ -131,7 +131,7 @@ $(document).ready(function() {
             }
         });
     }
-    showModal();
+    // showModal();
 
 
     function openMobileNav() {

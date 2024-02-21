@@ -61,7 +61,7 @@ block content
                 each item in [{img: '1', cat: 'Kitchen Remodeling', title: '1208 N. Lima St. ', loation: 'Burbank'}, {img: '2', cat: 'Kitchen Remodeling', title: '15 Castilian Ct. ', loation: 'Thousand Oaks'}, {img: '3', cat: 'Kitchen Remodeling', title: '1337 E. Palmer Dr.', loation: 'Glendale'}, {img: '4', cat: 'Kitchen Remodeling, Complete remodeling', title: '837 N. Lima St.', loation: 'Burbank'},]
 
 
-                    .portfolio__item.show_modal_js(href="#project")
+                    .portfolio__item(href="#project"+item.img+"")
                         .portfolio__content
                             .portfolio__locatin=item.loation
                             .portfolio__img.img
@@ -82,7 +82,7 @@ block content
                         .portfolio__img.img
                             img(src="../../img/portfolio_"+item.img+".webp" alt="image" loading="lazy")
 
-                .portfolio__item
+                .portfolio__item(href="#project5")
                     .portfolio__content
                         .portfolio__locatin GLENDALE
                         .portfolio__img.img

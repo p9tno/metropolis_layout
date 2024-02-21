@@ -62,65 +62,6 @@ $(document).ready(function() {
     }
     initPreviewSliders()
 
-    function initProjectSlider() {
-        const project = new Swiper(".project_js", {
-            slidesPerView: 1,
-            allowTouchMove: false,
-            clickable: false,
-            // loop: true,
-            speed: 2000,
-
-            autoplay: {
-              delay: 5000,
-            },
-
-            navigation: {
-                nextEl: '.icon_arrow_right',
-                prevEl: '.icon_arrow_left',
-            },
-
-            breakpoints: {
-                768: {
-                   // loop: false,
-                   grid: {
-                       rows: 2,
-                   },
-                },
-
-            },
-
-            pagination: {
-                el: ".swiper-pagination",
-                type: "fraction",
-            },
-
-            on: {
-                init: function (e) {
-                    $('.fraction_current_js').text(pad(e.realIndex + 1));
-                    $('.fraction_all_js').text(pad(Math.ceil(e.imagesToLoad.length / 2)));
-                },
-            },
-
-        });
-
-        project.on('slideChange', function (e) {
-            let currentSlide = e.realIndex;
-            $('.project__fraction').addClass('active');
-
-            setTimeout(()=>{
-                $('.project__fraction').removeClass('active');
-                $('.fraction_current_js').text(pad(currentSlide + 1));
-            },1000);
-        });
-
-        function pad(n) {
-            return (n < 10) ? ("0" + n) : n;
-        }
-    }
-    initProjectSlider()
-
-
-
 
     function addRecallSliders() {
         let recalls = $('.recall_js');
