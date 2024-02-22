@@ -1,0 +1,46 @@
+.notfound {
+    padding-top: 7em;
+    padding-bottom: 4em;
+    @media (min-width: 768px) {
+        padding-bottom: 9em;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__img {
+        width: 56.875em;
+        height: 37.5em;
+        font-size: 0.3em;
+        @media (min-width: 768px) {
+            font-size: 1em;
+        }
+    }
+
+    &__label {
+        color: #524D43;
+        text-align: center;
+        font-size: 0.875em;
+        font-weight: 300;
+        line-height: 1.5;
+        margin-top: -1em;
+        @media (min-width: 768px) {
+            font-size: 1em;
+            margin-top: -2em;
+            width: 40em;
+        }
+    }
+
+    &__link {
+        margin-top: 3em;
+        width: 100%;
+        @media (min-width: 768px) {
+            margin-top: 4em;
+            width: 37.5em;
+        }
+    }
+
+}

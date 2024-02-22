@@ -1,6 +1,8 @@
 // Style for button and pseudo button for input and link
 
 .btn {
+	position: relative;
+
 	display: inline-flex;
 	align-items: center;
 	justify-content: space-between;
@@ -39,26 +41,25 @@
 		font-size: 1em;
 	}
 
-	@media (min-width: 768px) {
-		position: relative;
+	&:before {
+		content: '';
+		position: absolute;
+		bottom: -0.75em;
+		left: 0;
+		width: 100%;
+		display: block;
+		height: 0.125em;
+		background-color: $second_color;
 
-		&:before {
-			content: '';
-			position: absolute;
-			bottom: -0.75em;
-			left: 0;
-			display: block;
+		@media (min-width: 768px) {
 			width: 0;
-			height: 0.125em;
-			background-color: $second_color;
 			opacity: 0;
-
-			@media (min-width: 768px) {
-				transition: 0.8s;
-			}
-
+			transition: 0.8s;
 		}
 
+	}
+
+	@media (min-width: 768px) {
 		&:hover {
 			&:before {
 				width: 100%;

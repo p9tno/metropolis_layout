@@ -9,11 +9,53 @@ block content
     .breadcrumbs.section
         .container_center.container_center_right
             .kama_breadcrumbs
+
                 span
                     a(href="#")
-                        span Главная
+                        span Home Page
+
                 span.kb_sep
 
-                span.kb_title Контакты
+                span.kb_title Contact Us
+
     // end breadcrumbs
 
+    // begin contact
+    section#contact.contact.section
+        .container_center
+            .contact__head
+                h1.section__title Contact Us
+                .contact__desc We proud to be one of the first companies to provide our client complimentary design sketches and full consultation on the proposed projects. let us consult on your upcoming remodeling project. Free estimate and design is just a click away.
+            .contact__content
+                .contact__form
+                    .contact__label Contact Form:
+
+                    form.form.form_grid
+                        .form__row.form__row_full.tick
+                            input(type="text" placeholder="Name")
+
+                        .form__row.tick
+                            input(type="email" placeholder="E-mail")
+
+                        .form__row.tick
+                            input(type="tel" placeholder="Phone")
+
+                        .form__row.form__row_full.tick
+                            input(type="text" placeholder="Address")
+
+                        .form__row.form__row_full
+                            textarea(type="text" placeholder="Progect: write a few words about your project")
+
+                        .form__row.form__row_full.tick
+                            input(type="number" placeholder="Budget")
+
+                        .form__row.form__row_full
+                            button.btn(type="submit") 
+                                span request quote
+
+                    // end form
+
+                .contact__img.img
+                    img(src="../../img/contact.webp" alt="image" loading="lazy")
+
+    // end contact

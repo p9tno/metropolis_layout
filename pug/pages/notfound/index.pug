@@ -5,14 +5,16 @@ block variable
     //- -var page = 'bg';
 
 block content
-    // begin breadcrumbs
-    .breadcrumbs.section
-        .container_center.container_center_right
-            .kama_breadcrumbs
-                span
-                    a(href="#")
-                        span Главная
-                span.kb_sep
+    // begin notfound
+    section#notfound.notfound.section
+        .container_center
+            .notfound__content
+                .notfound__img.img
+                    img(src="../../img/notfound.webp" alt="image" loading="lazy")
+                .notfound__label We proud to be one of the first companies to provide our client complimentary design sketches and full consultation on the proposed projects. 
+                .notfound__link
+                    a.btn(href="#")
+                        span home page
 
-                span.kb_title Контакты
-    // end breadcrumbs
+
+    // end notfound

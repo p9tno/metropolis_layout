@@ -1,7 +1,7 @@
 window.onload = function () {
     const dataProject =
         {
-            cat: 'Kitchen Remodeling',
+            // cat: 'Kitchen Remodeling',
             title: '1208 N. Lima St.',
             location: 'Thousand Oaks',
             text: '<p>Like most homes that were built as part of a development project in Thousand oaks the kitchen in this home was extremely small and enclosed from all sides with only 2 small pathways leading to it. The first think on the list was to remove the largest wall and opening the spaceto the living area.</p><p>Like most homes that were built as part of a development project in Thousand oaks the kitchen in this home was extremely small and enclosed from all sides with only 2 small pathways leading to it. The first think on the list was to remove the largest wall and opening the spaceto the living area.</p>',
