@@ -50,6 +50,20 @@
         opacity: 0.5;
         cursor: not-allowed;
     }
+
+    &-dark {
+        background-color: $second_color;
+        color: $color_light;
+
+        width: 2.375em;
+        height: 2.375em;
+        @media (min-width: 768px) {
+            width: 3.625em;
+            height: 3.625em;
+
+        }
+    }
+
 }
 
 .swiper-pagination {

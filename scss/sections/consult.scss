@@ -1,0 +1,33 @@
+.consult {
+    .section__title {
+        @media (max-width: 767px) {
+            font-size: 2.375em;
+        }
+    }
+    padding-bottom: 3.75em;
+    @media (min-width: 768px) {
+        padding-bottom: 6.25em;
+
+    }
+
+    &__content {
+        border-top: 0.0625em solid rgba(156, 143, 120, 0.40);
+        padding-top: 1.25em;
+        @media (min-width: 768px) {
+            padding-top: 2.5em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2em;
+        }
+    }
+
+    &__btn {
+        margin-top: 2.125em;
+        @media (min-width: 768px) {
+            margin-top: 0;
+            width: 17.5em;
+        }
+    }
+
+}

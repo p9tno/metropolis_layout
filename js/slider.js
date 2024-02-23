@@ -60,7 +60,30 @@ $(document).ready(function() {
             },
         });
     }
-    initPreviewSliders()
+    initPreviewSliders();
+
+    function initSingleServiceSlider() {
+        const info = new Swiper(".testimonials_js", {
+            slidesPerView: 1,
+            allowTouchMove: false,
+            clickable: false,
+            loop: true,
+            speed: 2000,
+
+            autoHeight: true,
+
+            // autoplay: {
+            //   delay: 5000,
+            // },
+
+
+            navigation: {
+                nextEl: '.testimonials__control .icon_arrow_right',
+                prevEl: '.testimonials__control .icon_arrow_left',
+            },
+        });
+    }
+    initSingleServiceSlider();
 
 
     function addRecallSliders() {

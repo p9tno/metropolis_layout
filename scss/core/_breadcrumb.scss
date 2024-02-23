@@ -3,13 +3,9 @@
 	padding-bottom: 0.875em;
 	@media (min-width: 768px) {
 		padding-top: 8.375em;
-		// padding-bottom: 1.875em;
 	}
 
 	.kama_breadcrumbs {
-		display: flex;
-		align-items: center;
-		gap: 0.3em;
 		font-weight: 300;
 		line-height: 1.5;
 		font-size: 1em;
@@ -19,36 +15,16 @@
 			color: #C3B9A7;
 		}
 
+		.kb_sep {
+			display: inline-block;
+			color: #C3B9A7;
+
+			margin: 0 0.3em;
+		}
+
 		> span {
-			position: relative;
-
-			&:before {
-				content: '';
-				position: absolute;
-				top: 50%;
-				transform: translateY(-50%);
-				left: -0.3em;
-
-				width: 0.0625em;
-				height: 60%;
-				background-color: #C3B9A7;
-
-			}
-
-			&:first-child {
-				&:before {
-					content: none;
-
-				}
-			}
-
 			&.kb_title {
 				color: #514B42;
-
-				&:before {
-					content: '';
-					background-color: #514B42;
-				}
 			}
 
 		}

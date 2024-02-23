@@ -1,0 +1,73 @@
+.testimonials {
+    .section__title {
+        @media (max-width: 767px) {
+            font-size: 2.375em;
+            text-align: center;
+        }
+    }
+
+    .container_center {
+        @media (max-width: 767px) {
+            padding: 0;
+        }
+    }
+
+    &__slider {
+        margin-top: 1.5em;
+        @media (min-width: 768px) {
+            margin-top: 2.5em;
+            padding: 0 2em;
+            position: relative;
+
+        }
+
+        .recall__grid {
+            margin: 0;
+        }
+
+        .recall__item {
+            margin: 0;
+        }
+
+        .recall__box {
+            @media (min-width: 768px) {
+                padding-left: 5.625em;
+            }
+
+        }
+
+        .recall__video {
+            @media (max-width: 767px) {
+                height: 12.5em;
+            }
+        }
+
+    }
+
+    &__control {
+        margin-top: 1.25em;
+        @media (max-width: 767px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.625em;
+        }
+        @media (min-width: 768px) {
+            .swiper-arrow {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 40;
+            }
+
+            .icon_arrow_left {
+                left: 0;
+            }
+
+            .icon_arrow_right {
+                right: 0;
+            }
+        }
+    }
+
+}

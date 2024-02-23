@@ -263,90 +263,8 @@ $(document).ready(function() {
     }
     doTabs();
 
-    function initSelect2 () {
-        function addIcon(icon) {
-            if (!icon.id) {
-                return icon.text;
-            }
-            let $icon = $(
-                '<span><span></span><i></i></span>'
-            );
-            $icon.find("span").text(icon.text);
-            $icon.find("i").attr("class", "icon_" + icon.element.value.toLowerCase());
-            return $icon;
-        }
-
-        $('.select').select2({
-            placeholder: $(this).data('placeholder'),
-            minimumResultsForSearch: Infinity,
-            // templateSelection: addIcon,
-        });
-
-        // $('.select').on('change',function() {
-        //     let val = $(this).val();
-        //     let form = $(this).closest('.form');
-        //     let phone = form.find('.form__row_phone_js');
-        //     let mail = form.find('.form__row_email_js');
-
-        //     if ( val == 'mail'){
-        //         mail.removeClass('form__row_hide');
-        //         mail.find('input').prop('required',true);
-
-        //         phone.addClass('form__row_hide');
-        //         phone.find('input').prop('required',false);
-
-        //     } else {
-        //         mail.addClass('form__row_hide');
-        //         mail.find('input').prop('required',false);
-
-        //         phone.removeClass('form__row_hide');
-        //         phone.find('input').prop('required',true);
-        //     }
-        // })
-    }
-    // initSelect2();
 
 
-
-
-    // Stiky menu // Липкое меню. При прокрутке к элементу #header добавляется класс .stiky который и стилизуем
-    function stikyMenu() {
-        let HeaderTop = $( 'header' ).offset().top;
-        // let HeaderTop = $( 'header' ).offset().top + $( '.home' ).innerHeight();
-        let currentTop = $( window ).scrollTop();
-
-        setNavbarPosition();
-
-        $( window ).scroll( function () {
-            setNavbarPosition();
-        } );
-
-        function setNavbarPosition() {
-            currentTop = $( window ).scrollTop();
-
-            if ( currentTop > HeaderTop ) {
-                $( 'header' ).addClass( 'stiky' );
-            } else {
-                $( 'header' ).removeClass( 'stiky' );
-            }
-
-            // $( '.navbar__link' ).each( function () {
-            //     let section = $( this ).attr( 'href' );
-            //
-            //     if ( $( 'section' ).is( section ) ) {
-            //         let offset = $( section ).offset().top;
-            //
-            //         if ( offset <= currentTop && offset + $( section ).innerHeight() > currentTop ) {
-            //             $( this ).addClass( 'active' );
-            //         } else {
-            //             $( this ).removeClass( 'active' );
-            //         }
-            //     }
-            // } );
-        }
-
-    }
-    // stikyMenu();
 
     // Видео youtube для страницы
     function uploadYoutubeVideo() {
@@ -412,7 +330,7 @@ $(document).ready(function() {
             } );
         }
     };
-    // uploadYoutubeVideoForModal();
+    uploadYoutubeVideoForModal();
 
 
     // start onVisible

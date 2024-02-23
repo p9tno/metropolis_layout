@@ -41,8 +41,14 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 
-		width: 5.375em;
-		height: 5.375em;
+		width: 4.5em;
+		height: 4.5em;
+
+		@media (min-width: 768px) {
+			width: 5.375em;
+			height: 5.375em;
+
+		}
 
 		background-color: #F5F3EF;
 		color: #948D7C;
