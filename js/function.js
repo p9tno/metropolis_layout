@@ -161,25 +161,25 @@ $(document).ready(function() {
     // };
     // activeNav();
 
-    function toggleCategory() {
-        $('.category__toggle').click(function(event) {
-            $('.category').toggleClass('active');
-            $('.category__list').slideToggle(600)
-        })
+    // function toggleCategory() {
+    //     $('.category__toggle').click(function(event) {
+    //         $('.category').toggleClass('active');
+    //         $('.category__list').slideToggle(600)
+    //     })
 
-        // $('.category').on('mouseenter', function(e) {
-        //     // console.log('mouse on');
-        //     $('.category').addClass('active');
-        //     $('.category__list').slideDown()
-        // });
-        //
-        $('.category').on('mouseleave', function(e) {
-            // console.log('mouse of');
-            $('.category').removeClass( 'active' );
-            $('.category__list').slideUp(600)
-        });
-    }
-    toggleCategory();
+    //     // $('.category').on('mouseenter', function(e) {
+    //     //     // console.log('mouse on');
+    //     //     $('.category').addClass('active');
+    //     //     $('.category__list').slideDown()
+    //     // });
+    //     //
+    //     $('.category').on('mouseleave', function(e) {
+    //         // console.log('mouse of');
+    //         $('.category').removeClass( 'active' );
+    //         $('.category__list').slideUp(600)
+    //     });
+    // }
+    // toggleCategory();
 
     function showMore(classItem, btn) {
         // let classItem = '.vacancies__item';

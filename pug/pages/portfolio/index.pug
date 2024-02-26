@@ -30,22 +30,19 @@ block content
                 h1.section__title portfolio
                 .portfolio__category
                     .category
-                        .category__head
-                            .category__label
-                                span Project category:
-                            .category__toggle
-                            .category__item.filter-cat-js
+                        .category__label
+                            span Project category:
+
+                        .category__list
+                            .category__item
                                 input(type="radio" id="term_id_1" name="cat_name" value="term_id_1" checked)
                                 label(for="term_id_1")
                                     span All
                                     i 116
 
-
-
-                        .category__list
                             each item in [ {id: '2', label: 'Home Remodeling', i: '116'}, {id: '3', label: 'Kitchen Remodeling', i: '16'}, {id: '4', label: 'Bathroom Remodeling', i: '28'}, {id: '5', label: 'Room Addition', i: '52'}, {id: '7', label: 'Blueprints & Drafting', i: '23'}, {id: '6', label: '3D Design', i: '12'}, ]
 
-                                .category__item.filter-cat-js
+                                .category__item
                                     input(type="radio" id="term_id_"+item.id+"" name="cat_name" value="term_id_"+item.id+"")
                                     label(for="term_id_"+item.id+"")
                                         span=item.label

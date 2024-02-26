@@ -11,21 +11,16 @@
     }
 
     &__category {
-        margin-top: 1em;
+        margin-top: 1.25em;
         @media (min-width: 768px) {
-            margin-top: 0;
-            position: absolute;
-            top: 0.625em;
-            right: 0;
-            width: 65.375em;
-            z-index: 1;
+            margin-top: 2.5em;
         }
     }
 
     &__main {
 
         @media (min-width: 768px) {
-            margin-top: 3.75em;
+            margin-top: 2.875em;
 
             display: grid;
             grid-template-columns: repeat(3, 1fr);
