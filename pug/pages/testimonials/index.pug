@@ -43,9 +43,20 @@ block content
                                     .person__desc 3715 Los Olivos Ln. Glendale Angeles, CA
 
                     .recall__video
-                        .video
-                            .video__wrapper.js-youtube#OuOXvavAy1c(style="background-image: url('../../img/recall_1.webp')")
-                                .video__play
+                        .player
+                            .player__wrap(style="background-image: url('../../img/recall_1.webp')")
+                                .player__play
+
+                                <video width="100%" controls allowfullscreen="true" playsinline="playsinline" >
+                                    <source src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4" />
+                                </video>
+
+
+
+
+                        //- .video
+                        //-     .video__wrapper.js-youtube#OuOXvavAy1c(style="background-image: url('../../img/recall_1.webp')")
+                        //-         .video__play
 
 
 

@@ -366,6 +366,72 @@ $(document).ready(function() {
     } );
     // end onVisible
 
+    function videoPlayer() {
+        $('.player__play').on('click', function (e) {
+            // e.preventDefault();
+            let videoContainer = $(this).closest('.player');
+            let video = videoContainer.find('video')[0];
+            if (video.paused) {
+                video.play();
+                videoContainer.addClass('video-is-playing');
+            } else {
+                video.pause();
+                videoContainer.removeClass('video-is-playing');
+                video.load();
+            }
+
+        });
+    }
+    videoPlayer();
+
+    function videoPlayerModal() {
+
+        if ( $( '.playerModal_js' ) ) {
+            $( '.playerModal_js' ).on( 'click', function () {
+                let wrap = $( this ).closest( '.playerModal_js' );
+                let videoSrc = wrap.attr( 'data-src' );
+                let video = $('<video />', {
+                    src: videoSrc,
+                    type: 'video/mp4',
+                    controls: true,
+                    autoplay: true,
+            });
+
+            $(".modalVideo__wraper").append(video);
+
+            $('#modalVideo').modal('show');
+
+            $("#modalVideo").on('hide.bs.modal', function () {
+                $(".modalVideo__wraper").html('');
+            });
+
+            } );
+        }
+    }
+
+
+
+
+    videoPlayerModal();
+
+    // $(function () {
+    //     var $videoContainer = $('#video'),
+    //     $videoControls = $('.video-control'),
+    //     $video = $('#myVideo')[0];
+    //
+    //     $videoControls.click(function () {
+    //         if ($video.paused) {
+    //             $video.play();
+    //             $videoContainer.addClass('video-is-playing');
+    //         } else {
+    //             $video.pause();
+    //             $videoContainer.removeClass('video-is-playing');
+    //             //	set the poster back
+    //             $video.load();
+    //         }
+    //     });
+    // });
+
 
 
     // --------------------------------------------------------------------
